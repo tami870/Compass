@@ -1,0 +1,57 @@
+@use "global" as *;
+
+.header {
+  padding-top: rem(22);
+  padding-bottom: rem(35);
+}
+
+.header__inner {
+  max-width: rem(1300);
+  padding-right: $padding-pc;
+  padding-left: $padding-pc;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: rem(24);
+
+  @include mq(md) {
+    padding-right: $padding-sp;
+    padding-left: $padding-sp;
+    justify-content: space-between;
+  }
+}
+
+.header__nav {
+}
+
+.header__items {
+  display: flex;
+  align-items: center;
+}
+
+.header__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: rem(4);
+}
+
+.header__tel-link {
+  font-weight: bold;
+  color: $button-front;
+  font-size: rem(18);
+  text-decoration: none;
+}
+
+.header__tel-time {
+  font-size: rem(12);
+  color: #666;
+}
+
+.header__button {
+  margin-top: rem(4);
+}

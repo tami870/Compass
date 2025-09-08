@@ -1,0 +1,64 @@
+@use "global" as *;
+
+.section-title {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.section-title__jp {
+  color: $text-blue;
+  font-size: rem(40);
+  margin-top: rem(13);
+  order: 2;
+  font-weight: $bold;
+  font-family: $base-font-family;
+
+  @include mq(md) {
+    font-size: rem(26);
+  }
+}
+
+.section-title__en {
+  color: $text-black2;
+  font-size: rem(25);
+  order: 1;
+  font-weight: $regular;
+  font-family: $second-font-family;
+
+  @include mq(md) {
+    font-size: rem(21);
+  }
+}
+
+// .section-title__en--white {
+//   color: $white;
+// }
+
+.section-title--left {
+  text-align: center;
+
+  @include mq(md) {
+    text-align: left;
+  }
+}
+
+.section-title--double-left {
+  text-align: left;
+}
+
+.section-title--right {
+  text-align: center;
+
+  @include mq(md) {
+    text-align: right;
+  }
+}
+
+.section-title--center {
+  text-align: center;
+
+  @include mq(md) {
+    text-align: center;
+  }
+}

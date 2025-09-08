@@ -1,0 +1,48 @@
+@use "sass:math";
+
+// インナー幅設定
+// コンテンツのインナー幅（最も共通の幅が多い部分）
+$inner: 1120px;
+// ※キュンパス幅ではなくインナーの幅を指す
+
+// 余白
+$padding-pc: 25px;
+$padding-sp: 20px;
+
+////////////////////
+// フォント設定
+////////////////////
+
+$base-font-family: "Noto Sans JP", "Helvetica Neue", "Hiragino Kaku Gothic ProN",
+  "Meiryo", sans-serif;
+$second-font-family: "Noto Sans", "Helvetica Neue", "Hiragino Kaku Gothic ProN",
+  "Meiryo", sans-serif;
+$numbers-font-family: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho",
+  "MS PMincho", serif;
+// ※検証ツールでしっかり反映されているか確認する
+
+body {
+  font-family: $base-font-family;
+}
+
+// フォントウェイト
+$regular: 400;
+$medium: 500;
+$bold: 700;
+$black-bold: 800;
+
+////////////////////
+// 色の指定
+////////////////////
+
+//色指定（共通性のあるものは出来る限り指定すると良い）
+$button-front: #f46600;
+$button-base: #a0531b;
+$white: #ffffff;
+$white2: #eaf3f5;
+$white3: #effbfe;
+$text-blue: #008cb3;
+$text-blue2: #f7f7f7;
+$text-black: #022732;
+$text-black2: #615f5f;
+$form-blue: #03a8d6;

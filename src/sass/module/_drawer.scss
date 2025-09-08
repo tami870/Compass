@@ -1,0 +1,58 @@
+@use "global" as *;
+
+/* セクションリンクのクリック時のスクロール位置調整 */
+:root {
+  --header-height: rem(80);
+}
+[id] {
+  scroll-margin-top: var(--header-height);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.drawer-menu {
+  position: fixed;
+  z-index: 5000;
+  inset: 0;
+  display: none;
+  width: 100%;
+  /* ビューポート起伏対策：古→新の順に上書き */
+  height: 30vh;
+  height: 30svh;
+  height: 30dvh;
+  overflow: hidden;
+}
+
+.drawer-menu__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: inherit;
+}
+
+.drawer-menu__items {
+  display: flex;
+  flex-direction: column;
+}
+
+.drawer-menu__item {
+  display: inline-block;
+}
+
+.drawer-menu__item:not(:first-child) {
+  margin-top: rem(50);
+}
+
+.drawer-menu__link {
+  display: inline-block;
+  // width: rem(200);
+  text-align: center;
+  letter-spacing: 0.04em;
+  font-family: $base-font-family;
+  font-size: rem(20);
+  font-weight: $bold;
+  color: #333;
+}

@@ -1,57 +1,108 @@
 @use "global" as *;
 
 .header {
-  padding-top: rem(22);
-  padding-bottom: rem(35);
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 6000;
+  width: 100%;
+  height: var(--header-height);
+  background-color: $white;
+  // padding-top: rem(9);
+  // padding-bottom: rem(9);
 }
 
 .header__inner {
   max-width: rem(1300);
-  padding-right: $padding-pc;
-  padding-left: $padding-pc;
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-
+  // padding-right: ren(25);
+  // padding-left: rem(43);
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: rem(24);
 
   @include mq(md) {
-    padding-right: $padding-sp;
-    padding-left: $padding-sp;
     justify-content: space-between;
   }
 }
 
+.header__title {
+  margin: 0;
+}
+
+.header__logo {
+  display: block;
+  width: rem(225);
+  height: auto;
+}
+
 .header__nav {
+  margin-left: auto;
 }
 
 .header__items {
   display: flex;
-  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.header__item {
+}
+
+.header__link {
+  display: inline-block;
+  color: $text-black;
+  font-size: rem(16);
+  transition: opacity 0.3s;
+  padding-top: rem(20);
+  padding-bottom: rem(20);
+  padding-right: rem(19);
+  padding-left: rem(19);
+}
+
+.header__item--last .header__link {
+  padding-right: 0;
+}
+
+.header__link:hover {
+  opacity: 0.7;
 }
 
 .header__contact {
   display: flex;
+  align-items: center;
+  gap: rem(16);
+  margin-left: rem(33);
+}
+
+.header__tel {
+  display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  gap: rem(4);
 }
 
 .header__tel-link {
+  font-size: rem(30);
   font-weight: bold;
   color: $button-front;
-  font-size: rem(18);
-  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.header__tel-icon {
+  font-size: rem(16);
+  width: rem(25);
 }
 
 .header__tel-time {
-  font-size: rem(12);
-  color: #666;
+  font-size: rem(14);
+  font-weight: bold;
+  color: $text-black;
+  padding-left: 2em;
 }
 
 .header__button {
-  margin-top: rem(4);
+  width: rem(170);
 }

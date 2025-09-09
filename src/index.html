@@ -40,8 +40,8 @@
         <a href="/" class="header__link" aria-label="トップページへ戻る">
           <picture>
             <source media="(max-width: 767px)" srcset="./assets/images/common/header-logo_sp.svg">
-            <img class="header__logo" src="./assets/images/common/header-logo_pc.svg" alt="クラウド管理会社" width="225"
-              height="39" decoding="async" loading="eager" fetchpriority="high">
+            <img class="header__logo" src="./assets/images/common/header-logo_pc.svg" alt="クラウド管理会社のロゴ" width="225"
+              height="35" decoding="async" loading="lazy" fetchpriority="high">
           </picture>
         </a>
       </h1>
@@ -55,24 +55,32 @@
           <li class="header__item">
             <a href="#service" class="header__link">サービス</a>
           </li>
-          <li class="header__item">
-            <a href="#conpany" class="header__link">会社概要</a>
+          <li class="header__item header__item--last">
+            <a href="#company" class="header__link">会社概要</a>
           </li>
         </ul>
       </nav>
-    </div>
-
-    <!-- 電話番号・ボタン -->
-    <div class="header__contact u-desktop">
-      <p class="header__tel">
-        <a href="tel:05017916402" class="header__tel-link">
-          <span class="header__tel-icon">📞</span>
-          050-1791-6402
-        </a>
-        <span class="header__tel-time">受付時間：平日9:00〜18:00</span>
-      </p>
-      <div class="header__button">
-        <a href="#contact" class="button"><span>お問い合わせ</span></a>
+      <!-- 電話番号・ボタン -->
+      <div class="header__contact u-desktop">
+        <p class="header__tel">
+          <a href="tel:05017916402" class="header__tel-link">
+            <span class="header__tel-icon">
+              <img src="./assets/images/common/tel-icon.svg" alt="" width="25" height="25" loading="lazy"
+                decoding="async">
+            </span>
+            050-1791-6402
+          </a>
+          <span class="header__tel-time">受付時間：平日9:00〜18:00</span>
+        </p>
+        <div class="header__button">
+          <a href="#contact" class="button button--contact">
+            <span class="button__icon" aria-hidden="true">
+              <img src="./assets/images/common/mail-icon.svg" alt="" width="18" height="13" loading="lazy"
+                decoding="async">
+            </span>
+            <span class="button__text">お問い合わせ</span>
+          </a>
+        </div>
       </div>
     </div>
 
@@ -85,19 +93,15 @@
 
     <!-- ドロワー -->
     <div class="drawer-menu js-drawer">
-      <div class="drawer-menu__background"></div>
       <div class="drawer-menu__inner">
         <ul class="drawer-menu__items">
-          <li class="drawer-menu__item">
-            <a href="#aboutus" class="drawer-menu__link">クラウド管理とは</a>
-          </li>
-          <li class="drawer-menu__item">
-            <a href="#service" class="drawer-menu__link">サービス</a>
-          </li>
-          <li class="drawer-menu__item">
-            <a href="#company" class="drawer-menu__link">会社概要</a>
-          </li>
+          <li class="drawer-menu__item"><a href="#aboutus" class="drawer-menu__link">クラウド管理とは</a></li>
+          <li class="drawer-menu__item"><a href="#service" class="drawer-menu__link">サービス</a></li>
+          <li class="drawer-menu__item"><a href="#company" class="drawer-menu__link">会社概要</a></li>
         </ul>
+        <div class="drawer-menu__footer">
+          <a href="#contact" class="button button--contact">お問い合わせ</a>
+        </div>
       </div>
     </div>
   </header>

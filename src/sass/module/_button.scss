@@ -9,7 +9,7 @@
   color: $white;
   letter-spacing: 0.1em;
   text-align: center;
-  padding: rem(20) rem(20);
+  padding: rem(15) rem(15);
   border-radius: rem(60);
   background-color: $button-base;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
@@ -39,6 +39,15 @@
   position: relative;
   z-index: 20;
   display: inline-block;
+}
+
+.button--contact {
+  font-size: rem(16);
+  font-weight: $medium;
+  line-height: 1;
+  color: $white;
+  border-radius: rem(24);
+  padding: rem(15) rem(21) rem(9);
 }
 
 .button--submit {

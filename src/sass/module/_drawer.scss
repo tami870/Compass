@@ -1,45 +1,66 @@
 @use "global" as *;
 
 /* セクションリンクのクリック時のスクロール位置調整 */
-:root {
-  --header-height: rem(80);
-}
-[id] {
-  scroll-margin-top: var(--header-height);
-}
-html {
-  scroll-behavior: smooth;
-}
+// :root {
+//   --header-height: rem(80);
+// }
+// [id] {
+//   scroll-margin-top: var(--header-height);
+// }
+// html {
+//   scroll-behavior: smooth;
+// }
 
 .drawer-menu {
   position: fixed;
-  z-index: 5000;
+  z-index: 50;
   inset: 0;
   display: none;
-  width: 100%;
-  /* ビューポート起伏対策：古→新の順に上書き */
-  height: 30vh;
-  height: 30svh;
-  height: 30dvh;
-  overflow: hidden;
+  background-color: $white;
+  display: none;
+  overflow-y: auto;
+  padding-top: var(--header-height);
+}
+
+:root {
+  --header-height: rem(70);
+}
+
+.drawer-menu.is-open {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .drawer-menu__inner {
-  position: relative;
-  z-index: 1;
   display: flex;
-  align-items: center;
-  width: 100%;
-  height: inherit;
+  flex-direction: column;
+  justify-content: space-between;
+
+  // position: relative;
+  // z-index: 1;
+  // width: 100%;
+  // height: inherit;
 }
 
 .drawer-menu__items {
   display: flex;
   flex-direction: column;
+  gap: rem(32);
+  padding: 0;
+  margin: 0;
 }
 
 .drawer-menu__item {
-  display: inline-block;
+  // display: inline-block;
 }
 
 .drawer-menu__item:not(:first-child) {
@@ -47,12 +68,18 @@ html {
 }
 
 .drawer-menu__link {
-  display: inline-block;
-  // width: rem(200);
-  text-align: center;
-  letter-spacing: 0.04em;
+  display: block;
+  text-align: left;
   font-family: $base-font-family;
   font-size: rem(20);
   font-weight: $bold;
   color: #333;
+  padding: rem(8) 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.drawer-menu__link::after {
+  content: "▾";
+  float: right;
+  color: #999;
 }

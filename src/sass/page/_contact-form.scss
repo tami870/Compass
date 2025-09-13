@@ -1,0 +1,61 @@
+@use "global" as *;
+
+.contact-form {
+  background-color: $form-blue;
+  padding-top: rem(46);
+  padding-bottom: rem(155);
+
+  @include mq(md) {
+    padding-top: rem(44);
+    padding-bottom: rem(90);
+  }
+}
+
+.contact-form__inner {
+}
+
+.contact-form__title {
+}
+
+.contact-form__form-area {
+  padding-top: rem(57);
+  padding-bottom: rem(80);
+
+  @include mq(md) {
+    padding-top: rem(52);
+    padding-bottom: rem(55);
+  }
+}
+
+.form {
+}
+
+.form__group {
+}
+
+.form__label {
+}
+
+.form__required {
+}
+
+.form__input {
+}
+
+.form__textarea {
+}
+
+.form__group--checkbox {
+}
+
+.form__checkbox-label {
+}
+
+.form__checkbox {
+}
+
+.form__link {
+}
+
+.form__button {
+}

@@ -62,7 +62,7 @@
 .drawer-menu__items {
   display: flex;
   flex-direction: column;
-  padding: rem(10) 0;
+  // padding: rem(10) 0;
   margin: 0;
 }
 
@@ -70,18 +70,15 @@
   // display: inline-block;
 }
 
-.drawer-menu__item:not(:first-child) {
-  margin-top: rem(50);
-}
-
 .drawer-menu__link {
   display: block;
   text-align: left;
+  padding: rem(21) 0;
   font-family: $base-font-family;
   font-size: rem(20);
   font-weight: $bold;
-  color: #333;
-  border-bottom: 1px solid #ddd;
+  color: #333; //確認
+  border-bottom: 1px solid #ddd; //色確認
 }
 
 .drawer-menu__link::after {
@@ -91,8 +88,8 @@
 }
 
 .drawer-menu__footer {
-  // position: sticky;
-  // bottom: 0;
-  // background: $white;
-  // padding: rem(16);
+  margin-top: rem(53);
+  display: inline-block;
+  width: 100%;
+  text-align: center;
 }

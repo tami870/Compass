@@ -35,19 +35,24 @@
 }
 
 // テキストを擬似要素の上に表示
-.button span {
+.button__text {
   position: relative;
-  z-index: 20;
+  z-index: 90;
   display: inline-block;
 }
 
-.button--contact {
+.button--main {
+  width: 100%;
   font-size: rem(16);
   font-weight: $medium;
   line-height: 1;
   color: $white;
   border-radius: rem(24);
-  padding: rem(15) rem(21) rem(9);
+  padding: rem(12) rem(21);
+}
+
+.button--drawer {
+  width: 80%;
 }
 
 .button--submit {

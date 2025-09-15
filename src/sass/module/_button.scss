@@ -1,5 +1,8 @@
 @use "global" as *;
 
+////////////////////////////////////////////
+// ボタン共通
+////////////////////////////////////////////
 .button {
   position: relative;
   display: inline-block;
@@ -14,8 +17,15 @@
   border-radius: rem(60);
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  z-index: 0;
+  z-index: 10;
   cursor: pointer;
+}
+
+// 押すと凹む
+.button:active {
+  background-color: transparent;
+  box-shadow: none;
+  transition: background-color 0.3s;
 }
 
 // 前面をオレンジ色に
@@ -28,39 +38,17 @@
   height: 100%;
   background-color: $color-accent;
   border-radius: rem(60);
-  z-index: 0;
+  z-index: 20;
   transition: top 0.1s ease-in-out;
 }
 
 // テキストを前面に出す
 .button__text {
   position: relative;
-  z-index: 1;
+  z-index: 30;
 }
 
-.button--large {
-  padding: rem(24.5) rem(24.5);
-}
-
-// 中断Contactで使用
-.button--medium {
-  padding: rem(20.5) rem(20.5);
-  font-size: rem(24);
-  font-weight: $bold;
-}
-
-.button--small {
-  padding: rem(13) rem(13);
-}
-
-.button--xs {
-  padding: rem(8) rem(16);
-}
-
-.button:active::before {
-  top: 0;
-}
-
+// 電話のマーク
 .button__icon {
   position: relative;
   display: inline-block;
@@ -70,50 +58,33 @@
   z-index: 100;
 }
 
-// テキストを擬似要素の上に表示
-// .button__text {
-//   position: relative;
-//   z-index: 90;
-//   display: inline-block;
-// }
-
-// heroボタン
-.button__hero-text {
+////////////////////////////////////////////
+// 大きさ違い
+////////////////////////////////////////////
+//heroで使用
+.button--large {
+  padding: rem(24.5) rem(24.5);
+  font-weight: $bold;
   font-size: rem(30);
-  font-weight: $bold;
-
-  @include mq(md) {
-    font-size: rem(22);
-  }
 }
 
-.button__hero-text--strong {
-  font-size: rem(35);
+// 中断Contactで使用
+.button--medium {
+  padding: rem(20.5) rem(20.5);
+  font-size: rem(24);
   font-weight: $bold;
-
-  @include mq(md) {
-    font-size: rem(25);
-  }
 }
 
-.button--main {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: rem(2);
-  width: 100%;
-  font-size: rem(16);
+// headerで使用
+.button--small {
+  padding: rem(12) rem(12);
   font-weight: $medium;
-  line-height: 1;
-  color: $white;
-  border-radius: rem(24);
-  padding: rem(17) rem(17);
+  letter-spacing: 0;
 }
 
-.button--drawer {
-  width: 80%;
-}
-
+////////////////////////////////////////////
+// contact-form用ボタン
+////////////////////////////////////////////
 .button--submit {
   position: relative;
   display: inline-block;
@@ -128,11 +99,9 @@
   cursor: pointer;
 }
 
-.button:hover {
-  background-color: $button-base;
-}
-
+////////////////////////////////////////////
 // 「修正する」ボタン
+////////////////////////////////////////////
 .button--back {
   background-color: $text-blue;
 }
@@ -141,7 +110,6 @@
   background-color: $form-blue;
 }
 
-.button--back:hover {
-  background-color: $text-black;
-  color: $white;
+.button--back:active::before {
+  top: 0;
 }

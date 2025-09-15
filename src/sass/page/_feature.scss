@@ -5,11 +5,30 @@
   padding-bottom: rem(106);
   background-color: $background-blue;
   height: rem(1519);
+  position: relative;
 
   @include mq(md) {
     padding-top: rem(18);
     padding-bottom: rem(56);
     height: rem(1736);
+  }
+}
+
+.feature__background {
+  display: none;
+  position: absolute;
+  top: 15%;
+  right: 0;
+  width: 35%;
+  height: 82%;
+  background-image: url("../images/common/feature-common-image_sp.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  z-index: 1;
+
+  @include mq(md) {
+    display: block;
   }
 }
 
@@ -28,8 +47,12 @@
   margin-left: auto;
   width: clamp(rem(800), 73.21vw, rem(1200));
 
+  position: relative;
+  z-index: 10;
+
   @include mq(md) {
-    margin-top: rem(54);
+    margin-top: rem(53);
+    gap: rem(52);
     width: auto;
   }
 }
@@ -38,4 +61,6 @@
   display: flex;
   flex-direction: column;
   gap: rem(52);
+  position: relative;
+  overflow: hidden;
 }

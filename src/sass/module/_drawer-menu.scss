@@ -1,15 +1,15 @@
 @use "global" as *;
 
 /* セクションリンクのクリック時のスクロール位置調整 */
-// :root {
-//   --header-height: rem(80);
-// }
-// [id] {
-//   scroll-margin-top: var(--header-height);
-// }
-// html {
-//   scroll-behavior: smooth;
-// }
+:root {
+  --header-height: rem(80);
+}
+[id] {
+  scroll-margin-top: var(--header-height);
+}
+html {
+  scroll-behavior: smooth;
+}
 
 .drawer-menu {
   position: fixed;
@@ -18,7 +18,6 @@
   display: none;
   background-color: $white;
   overflow-y: auto;
-  // padding-top: var(--header-height);
 
   @include mq(md) {
     position: static;
@@ -52,44 +51,51 @@
   justify-content: space-between;
   min-height: 100%;
   padding: rem(22);
-
-  // position: relative;
-  // z-index: 1;
-  // width: 100%;
-  // height: inherit;
 }
 
 .drawer-menu__items {
   display: flex;
   flex-direction: column;
-  // padding: rem(10) 0;
   margin: 0;
 }
 
 .drawer-menu__item {
-  // display: inline-block;
 }
 
 .drawer-menu__link {
-  display: block;
+  // display: block;
   text-align: left;
   padding: rem(21) 0;
   font-family: $base-font-family;
   font-size: rem(20);
   font-weight: $bold;
-  color: #333; //確認
-  border-bottom: 1px solid #ddd; //色確認
+  color: #333;
+  border-bottom: 1px solid #ddd;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
 
 .drawer-menu__link::after {
-  content: "▾";
-  float: right;
-  color: #999;
+  content: "";
+  display: block;
+  width: rem(9);
+  height: rem(9);
+  border-top: solid 3px $form-blue;
+  border-right: solid 3px $form-blue;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
 }
 
 .drawer-menu__footer {
   margin-top: rem(53);
   display: inline-block;
-  width: 100%;
   text-align: center;
+}
+
+.drawer-menu__button {
+  max-width: rem(400);
+  width: 100%;
 }

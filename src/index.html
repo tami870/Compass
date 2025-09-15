@@ -32,12 +32,12 @@
 </head>
 
 <body>
-  <header class="header js-header">
+  <header id="header" class="header js-header">
     <div class="header__inner">
 
       <!-- ロゴ -->
       <h1 class="header__title">
-        <a href="/" class="header__link" aria-label="トップページへ戻る">
+        <a href="#" class="header__link" aria-label="トップページへ戻る">
           <picture>
             <source media="(max-width: 767px)" srcset="./assets/images/header/header-logo_sp.svg">
             <img class="header__logo" src="./assets/images/header/header-logo_pc.svg" alt="クラウド管理会社のロゴ" width="225"
@@ -50,13 +50,13 @@
       <nav class="header__nav u-desktop">
         <ul class="header__items">
           <li class="header__item">
-            <a href="#aboutus" class="header__link">クラウド管理とは</a>
+            <a href="#about" class="header__link">クラウド管理とは</a>
           </li>
           <li class="header__item">
-            <a href="#service" class="header__link">サービス</a>
+            <a href="#management-services" class="header__link">サービス</a>
           </li>
           <li class="header__item header__item--last">
-            <a href="#company" class="header__link">お客様の声</a>
+            <a href="#voice" class="header__link">お客様の声</a>
           </li>
         </ul>
       </nav>
@@ -95,12 +95,12 @@
     <div class="drawer-menu js-drawer">
       <div class="drawer-menu__inner">
         <ul class="drawer-menu__items">
-          <li class="drawer-menu__item"><a href="#aboutus" class="drawer-menu__link">クラウド管理とは</a></li>
-          <li class="drawer-menu__item"><a href="#service" class="drawer-menu__link">サービス</a></li>
+          <li class="drawer-menu__item"><a href="#about" class="drawer-menu__link">クラウド管理とは</a></li>
+          <li class="drawer-menu__item"><a href="#management-services" class="drawer-menu__link">サービス</a></li>
           <li class="drawer-menu__item"><a href="#voice" class="drawer-menu__link">お客様の声</a></li>
         </ul>
         <div class="drawer-menu__footer">
-          <a href="#contact" class="button button--drawer">
+          <a href="#contact-form" class="drawer-menu__button button">
             <span class="button__text">お問い合わせ</span>
           </a>
         </div>
@@ -109,50 +109,50 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section id="hero" class="hero">
       <div class="hero__inner">
-        <div class="hero__wrappper">
-          <div class="hero__content">
-            <!-- 家形のキャッチコピー -->
-            <h2 class="hero__catch">
-              <div class="hero__catch-sub">低コスト管理、すでに<span class="hero__catch-highlight--number">2,000</span><span
-                  class="hero__catch-highlight">戸で実現&#33;</span></div>
-              <div class="hero__catch-main">
-                <span class="hero__catch-line">マンション・アパート</span>の<br>
-                <span class="hero__catch-emphasis">管理費</span>を<span class="hero__catch-emphasis">削減</span>
-              </div>
-            </h2>
-            <!-- ボタン -->
-            <div class="hero__cta">
-              <p class="hero__cta-note"><span>簡単<br><strong>1</strong>分</span></p>
-              <button class="hero__cta-button button">
-                <span class="button__text button__hero-text">今すぐ<span
-                    class="button__text button__hero-text--strong">相談</span>する</span>
-              </button>
+        <div class="hero__content">
+
+          <!-- 家型のキャッチコピー -->
+          <h2 class="hero__catch">
+            <div class="hero__catch-sub">低コスト管理、すでに<span class="hero__catch-highlight--number">2,000</span><span
+                class="hero__catch-highlight">戸で実現&#33;</span></div>
+            <div class="hero__catch-main">
+              <span class="hero__catch-line">マンション&#xFF65;アパート</span>の<br>
+              <span class="hero__catch-emphasis">管理費</span>を<span class="hero__catch-emphasis">削減</span>
             </div>
+          </h2>
+
+          <!-- モデル画像 -->
+          <figure class="hero__image">
+            <picture>
+              <source srcset="./assets/images/common/hero-human_sp.svg" media="(max-width: 768px)" />
+              <img src="./assets/images/common/hero-human_pc.svg" alt="笑顔で手を挙げる女性が管理費削減をアピールしている写真" loading="lazy" />
+            </picture>
+          </figure>
+
+          <!-- バッジ -->
+          <div class="hero__badges">
+            <img src="./assets/images/common/hero-badge_pc01.svg" alt="管理戸数2,000戸突破の実績を示すバッジ" class="hero__badge"
+              loading="lazy" />
+            <img src="./assets/images/common/hero-badge_pc02.svg" alt="管理費が2%を示すバッジ" class="hero__badge"
+              loading="lazy" />
           </div>
 
-          <!-- 画像群 -->
-          <div class="hero__images">
-            <figure class="hero__image">
-              <picture>
-                <source srcset="./assets/images/common/hero-human_sp.svg" media="(max-width: 768px)" />
-                <img src="./assets/images/common/hero-human_pc.svg" alt="笑顔で手を挙げる女性が管理費削減をアピールしている写真" loading="lazy" />
-              </picture>
-            </figure>
-            <div class="hero__badges">
-              <img src="./assets/images/common/hero-badge_pc01.svg" alt="管理戸数2,000戸突破の実績を示すバッジ" class="hero__badge"
-                loading="lazy" />
-              <img src="./assets/images/common/hero-badge_pc02.svg" alt="管理費が2%を示すバッジ" class="hero__badge"
-                loading="lazy" />
-            </div>
+          <!-- ボタン -->
+          <div class="hero__cta">
+            <p class="hero__cta-note"><span>簡単<br><strong>1</strong>分</span></p>
+            <button class="hero__cta-button cta-button">
+              <span class="cta-button__text cta-button__hero-text">今すぐ<span
+                  class="cta-button__text cta-button__hero-text--strong">相談</span>する</span>
+            </button>
           </div>
-
         </div>
+
       </div>
     </section>
 
-    <section class="problem">
+    <section id="problem" class="problem">
       <div class="problem__inner inner">
         <h2 class="problem__heading">
           こんな<span class="problem__emphasis">お悩み</span>ありませんか？
@@ -183,11 +183,11 @@
       </div>
     </section>
 
-    <section class="about">
+    <section id="about" class="about">
       <div class="about__inner inner">
         <h2 class="about__title section-title">
           <span class="section-title__en" aria-hidden="true">about&ensp;us</span>
-          <span class="section-title__jp">クラウド管理とは？</span>
+          <span class="section-title__jp"><strong>クラウド管理</strong>とは？</span>
         </h2>
 
         <figure class="about__logo">
@@ -200,7 +200,7 @@
 
         <div class="about__text-area">
           <p class="about__text">
-            <strong>（株）クラウド管理会社</strong>と<br class="u-mobile"><strong>（株）タイセイ・ハウジー</strong>が<br>提供する不動管理共同サービスです
+            <strong>(株)クラウド管理会社</strong>と<br class="u-mobile"><strong>(株)タイセイ・ハウジー</strong>が<br>提供する不動管理共同サービスです
           </p>
           <p class="about__description">
             住民の皆さま住宅専用アプリをはじめ、装備を提供することで、<br>暮らしの充実、ライフサポートをします。
@@ -209,7 +209,7 @@
       </div>
     </section>
 
-    <section class="contact-cta">
+    <section id="contact-cta" class="contact-cta">
       <div class="contact-cta__inner inner">
         <div class="contact-cta__wrapper">
           <h2 class="contact-cta__title section-title">
@@ -221,7 +221,7 @@
             <div class="contact-cta__tel">
               <a href="tel:05017916402" class="contact-cta__tel-link">
                 <span class="contact-cta__tel-icon">
-                  <img src="/assets/images/icon/tel-icon.svg" alt="電話番号" width="25" height="25" loading="lazy"
+                  <img src="./assets/images/icon/tel-icon.svg" alt="電話番号" width="25" height="25" loading="lazy"
                     decoding="async">
                 </span>
                 <span class="contact-cta__tel-number">050-1791-6402</span>
@@ -229,7 +229,7 @@
               <p class="contact-cta__hours">受付時間：平日9:00〜18:00</p>
             </div>
             <div class="contact-cta__button">
-              <button class="button button--main">
+              <button class="button button--medium">
                 <span class="button__text">まずは相談してみる</span>
               </button>
             </div>
@@ -239,7 +239,7 @@
       </div>
     </section>
 
-    <section class="expectation">
+    <section id="expectation" class="expectation">
       <div class="expectation__inner">
         <h2 class="expectation__title section-title">
           <span class="section-title__en" aria-hidden="true">expectation</span>
@@ -298,7 +298,7 @@
       </div>
     </section>
 
-    <section class="management-services">
+    <section id="management-services" class="management-services">
       <div class="management-services__inner inner">
         <h2 class="management-services__title section-title">
           <span class="section-title__en" aria-hidden="true">management&ensp;services</span>
@@ -315,8 +315,7 @@
         <div class="management-services__description">
           <p class="management-services__text">
             2%の管理費用だからといって手抜き管理にはなりません。<br />
-            住宅管理は日本全国に拠点を持ち、創業実績、管理戸数90,000戸の実績を持つ株式会社タイセイ・ハウジーが担当します。
-            長年の実績とノウハウから、納得の管理業務をご提供いたします。
+            住宅管理は日本全国に拠点を持ち、創業38年、管理戸数90,000戸の実績を持つ株式会社タイセイ・ハウジーが担当致します。長年の実績とノウハウから、納得の管理業務をご提供いたします。
           </p>
         </div>
         <div class="management-services__stats">
@@ -338,7 +337,8 @@
       </div>
     </section>
 
-    <section class="feature">
+    <section id="feature" class="feature">
+      <div class="feature__background" aria-hidden="true"></div>
       <div class="feature__inner">
         <h2 class="feature__title section-title">
           <span class="section-title__en" aria-hidden="true">feature</span>
@@ -349,10 +349,7 @@
           <!-- ループ開始 -->
           <article class="feature__card feature-card">
             <div class="feature-card__background" aria-hidden="true">
-              <picture>
-                <source srcset="./assets/images/common/feature-common-image_sp.webp" media="(max-width: 768px)" />
-                <img src="./assets/images/common/feature-common-image_pc.webp" alt="空から撮影した都市の街並み" loading="lazy" />
-              </picture>
+              <img src="./assets/images/common/feature-common-image_pc.webp" alt="空から撮影した都市の街並み" loading="lazy" />
             </div>
             <figure class="feature-card__image">
               <picture>
@@ -365,17 +362,14 @@
                 <span class="feature-card__index">1.</span> 不動産管理業務
               </h3>
               <p class="feature-card__text">
-                2%だからといって手抜き管理にはなりません。一般的な管理業務を提供します。
+                2%だからといって手抜き管理にはなりません。<br class="u-mobile">一般的な管理業務を提供します。
               </p>
             </div>
           </article>
           <!-- ループ終了 -->
           <article class="feature__card feature-card feature-card--reverse">
             <div class="feature-card__background" aria-hidden="true">
-              <picture>
-                <source srcset="./assets/images/common/feature-common-image_sp.webp" media="(max-width: 768px)" />
-                <img src="./assets/images/common/feature-common-image_pc.webp" alt="空から撮影した都市の街並み" loading="lazy" />
-              </picture>
+              <img src="./assets/images/common/feature-common-image_pc.webp" alt="空から撮影した都市の街並み" loading="lazy" />
             </div>
             <figure class="feature-card__image">
               <picture>
@@ -395,10 +389,7 @@
           </article>
           <article class="feature__card feature-card">
             <div class="feature-card__background" aria-hidden="true">
-              <picture>
-                <source srcset="./assets/images/common/feature-common-image_sp.webp" media="(max-width: 768px)" />
-                <img src="./assets/images/common/feature-common-image_pc.webp" alt="空から撮影した都市の街並み" loading="lazy" />
-              </picture>
+              <img src="./assets/images/common/feature-common-image_pc.webp" alt="空から撮影した都市の街並み" loading="lazy" />
             </div>
             <figure class="feature-card__image">
               <picture>
@@ -420,7 +411,7 @@
       </div>
     </section>
 
-    <section class="voice">
+    <section id="voice" class="voice">
       <div class="voice__inner inner">
         <h2 class="voice__title section-title">
           <span class="section-title__en" aria-hidden="true">voice</span>
@@ -460,7 +451,7 @@
       </div>
     </section>
 
-    <section class="contact-form">
+    <section id="contact-form" class="contact-form">
       <div class="contact-form__inner inner">
         <h2 class="contact-form__title section-title">
           <span class="section-title__en section-title--white" aria-hidden="true">contact</span>
@@ -531,7 +522,7 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer id="footer" class="footer">
     <div class="footer__inner">
       <div class="footer__top">
         <figure class="footer__logo">
@@ -549,7 +540,7 @@
               <a href="#feature" class="footer__nav-link">3つの機能</a>
             </li>
             <li class="footer__nav-item">
-              <a href="#contact" class="footer__nav-link">お問合せ</a>
+              <a href="#contact-form" class="footer__nav-link">お問合せ</a>
             </li>
           </ul>
         </nav>
@@ -557,7 +548,7 @@
 
       <div class="footer__bottom">
         <p class="footer__policy">
-          <a href="/privacy-policy" class="footer__policy-link">プライバシーポリシー</a>
+          <a href="#" class="footer__policy-link">プライバシーポリシー</a>
         </p>
         <p class="footer__copyright">
           クラウド管理&ensp;&copy;&ensp;2023.&ensp;All&ensp;rights&ensp;reserved.

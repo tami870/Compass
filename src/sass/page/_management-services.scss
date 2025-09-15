@@ -3,6 +3,10 @@
 .management-services {
   padding-top: rem(80);
   padding-bottom: rem(150);
+  background-image: url(../images/common/background02.svg);
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: cover;
 
   @include mq(md) {
     padding-top: rem(48);
@@ -44,6 +48,10 @@
   font-size: rem(20);
   font-weight: $regular;
   color: $text-black;
+
+  @include mq(md) {
+    font-size: rem(21);
+  }
 }
 
 .management-services__stats {
@@ -51,6 +59,7 @@
   display: flex;
   justify-content: center;
   padding: rem(25);
+  gap: rem(51);
   border: 2px solid $form-blue;
   border-radius: rem(20);
   background-color: $white;
@@ -60,8 +69,7 @@
   text-align: center;
 
   @include mq(md) {
-    margin-top: rem(16);
-    padding-top: rem(27);
+    gap: 0;
   }
 }
 
@@ -69,9 +77,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  @include mq(md) {
-  }
 }
 
 .management-stats:not(:first-child) {
@@ -116,5 +121,5 @@
 }
 
 .management-stats--unit-space {
-  margin-left: 0.5em;
+  margin-left: 0.25em;
 }

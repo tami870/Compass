@@ -15,13 +15,20 @@
 .section-title__jp {
   color: $text-blue;
   font-size: rem(40);
-  margin-top: rem(13);
   font-weight: $bold;
   font-family: $base-font-family;
   display: block;
 
   @include mq(md) {
     font-size: rem(26);
+  }
+}
+
+.section-title__jp strong {
+  font-size: rem(60);
+
+  @include mq(md) {
+    font-size: rem(40);
   }
 }
 

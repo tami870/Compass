@@ -56,8 +56,8 @@
   letter-spacing: 0.15em;
   text-align: center;
   color: $text-black;
-  padding-right: rem(48);
-  padding-left: rem(48);
+  padding-right: rem(35);
+  padding-left: rem(35);
 
   @include mq(md) {
     font-size: rem(24);
@@ -78,6 +78,7 @@
 .about__description {
   margin-top: rem(31);
   font-size: rem(20);
+  letter-spacing: 0.2em;
   font-weight: $regular;
   display: inline-block;
   text-align: left;

@@ -71,6 +71,15 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
+
+  @include mq(md) {
+    max-width: rem(460);
+    width: auto;
+    align-items: flex-start;
+    margin: 0 auto;
+    text-align: left;
+    gap: rem(25);
+  }
 }
 
 .problem__item {
@@ -80,10 +89,9 @@
   padding-right: rem(24);
   width: fit-content;
   max-width: 100%;
-  overflow: visible;
 
   @include mq(md) {
-    margin-top: rem(30);
+    position: static;
   }
 }
 
@@ -95,7 +103,6 @@
 
   @include mq(md) {
     position: static;
-    margin-top: 0;
   }
 }
 

@@ -3,6 +3,10 @@
 .expectation {
   padding-top: rem(98);
   padding-bottom: rem(141);
+  background-image: url(../images/common/background01.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 
   @include mq(md) {
     padding-top: rem(48);

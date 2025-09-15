@@ -1,0 +1,90 @@
+@use "global" as *;
+
+.about {
+  background-color: $white;
+  padding-top: rem(60);
+  padding-bottom: rem(173);
+  background-image: url(../images/common/aboutus-background_pc.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+
+  @include mq(md) {
+    padding-top: rem(40);
+    padding-bottom: rem(40);
+    background-image: url(../images/common/aboutus-background_sp.svg);
+  }
+}
+
+.about__title {
+}
+
+.about__logo {
+  max-width: rem(618);
+  width: 100%;
+  height: auto;
+  margin-top: rem(35);
+  margin-right: auto;
+  margin-left: auto;
+
+  @include mq(md) {
+    max-width: rem(407);
+    margin-top: rem(25);
+  }
+}
+
+.about__text-area {
+  background-color: $background-blue;
+  box-shadow: 0 4px 4px 0 rgba(35, 179, 219, 0.2);
+  padding: rem(29) rem(8);
+  border-radius: rem(20);
+  margin-top: rem(55);
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  width: clamp(rem(500), 60.25vw, rem(1100));
+
+  @include mq(md) {
+    margin-top: rem(25);
+    padding: rem(32) rem(8);
+    width: 100%;
+  }
+}
+
+.about__text {
+  font-size: rem(28);
+  letter-spacing: 0.15em;
+  text-align: center;
+  color: $text-black;
+  padding-right: rem(48);
+  padding-left: rem(48);
+
+  @include mq(md) {
+    font-size: rem(24);
+    padding: 0;
+  }
+}
+
+.about__text strong {
+  font-size: rem(28);
+  font-weight: $bold;
+  color: $text-blue;
+
+  @include mq(md) {
+    font-size: rem(26);
+  }
+}
+
+.about__description {
+  margin-top: rem(31);
+  font-size: rem(20);
+  font-weight: $regular;
+  display: inline-block;
+  text-align: left;
+
+  @include mq(md) {
+    margin-top: rem(28);
+    font-size: rem(21);
+    letter-spacing: 0.2em;
+  }
+}

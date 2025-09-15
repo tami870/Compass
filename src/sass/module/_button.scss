@@ -34,6 +34,15 @@
   top: 0;
 }
 
+.button__icon {
+  position: relative;
+  display: inline-block;
+  width: rem(18); // ← 画像サイズに合わせる
+  height: rem(13); // ← 画像サイズに合わせる
+  vertical-align: middle;
+  z-index: 100;
+}
+
 // テキストを擬似要素の上に表示
 .button__text {
   position: relative;
@@ -41,14 +50,37 @@
   display: inline-block;
 }
 
+// heroボタン
+.button__hero-text {
+  font-size: rem(30);
+  font-weight: $bold;
+
+  @include mq(md) {
+    font-size: rem(22);
+  }
+}
+
+.button__hero-text--strong {
+  font-size: rem(35);
+  font-weight: $bold;
+
+  @include mq(md) {
+    font-size: rem(25);
+  }
+}
+
 .button--main {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(2);
   width: 100%;
   font-size: rem(16);
   font-weight: $medium;
   line-height: 1;
   color: $white;
   border-radius: rem(24);
-  padding: rem(12) rem(21);
+  padding: rem(17) rem(17);
 }
 
 .button--drawer {

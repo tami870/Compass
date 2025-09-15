@@ -2,67 +2,98 @@
 
 .form {
   width: 100%;
-  max-width: 720px;
-  margin: 0 auto;
+  max-width: rem(920);
+  margin: rem(57) auto 0;
   background-color: $white;
-  padding: rem(40) rem(24);
-  border-radius: rem(8);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-}
+  padding: rem(80) rem(140);
 
-@media screen and (max-width: 768px) {
-  .form {
-    padding: rem(24) rem(16);
+  @include mq(md) {
+    padding: rem(26) rem(9);
+    margin-top: rem(52);
   }
 }
 
 .form__group {
-  margin-bottom: rem(24);
+  margin-top: rem(32);
+
+  @include mq(md) {
+    margin-top: rem(40);
+  }
 }
 
-.form__group:last-of-type {
-  margin-bottom: 0;
+.form__group:first-of-type {
+  margin-top: 0;
 }
 
+// ラベル共通設定
 .form__label {
   display: inline-block;
-  font-size: rem(14);
-  font-weight: $medium;
-  margin-bottom: rem(8);
+  font-size: rem(16);
+  font-weight: $regular;
   color: $text-black;
+  line-height: 1.5;
+  margin-left: 0.5em;
+
+  @include mq(md) {
+    font-size: rem(21);
+  }
 }
 
+//「必須」ラベル
 .form__required {
   display: inline-block;
-  font-size: rem(12);
-  font-weight: $bold;
-  color: #f46600;
-  background-color: #fff0e5;
-  padding: rem(2) rem(6);
-  border-radius: rem(4);
-  margin-right: rem(6);
+  font-size: rem(10);
+  font-weight: $regular;
+  color: $white;
+  background-color: $button-front;
+  padding: rem(3) rem(8);
+
+  @include mq(md) {
+    padding: rem(3) rem(10);
+  }
+}
+
+// 通常ラベル
+.form__label-text {
+  margin-left: 0.5em;
+}
+
+//「必須」ラベルが伴わない通常ラベル
+.form__label:not(:has(.form__required)) .form__label-text {
+  margin-left: 0;
+}
+
+.form__input,
+.form__textarea {
+  width: 100%;
+  padding: rem(9.5) rem(8);
+  font-size: rem(25);
+  border: 1px solid #ddd;
+  background-color: $white;
+  color: $text-black;
+  margin-top: rem(8);
 }
 
 .form__input {
-  width: 100%;
-  padding: rem(12);
-  font-size: rem(14);
-  border: 1px solid #ccc;
-  border-radius: rem(4);
-  background-color: $white;
-  color: $text-black;
 }
 
 .form__textarea {
-  width: 100%;
-  padding: rem(12);
-  font-size: rem(14);
-  border: 1px solid #ccc;
-  border-radius: rem(4);
-  background-color: $white;
-  color: $text-black;
   resize: vertical;
   min-height: rem(120);
+}
+
+// プレースホルダー
+.form__input::placeholder,
+.form__textarea::placeholder {
+  color: #999;
+  font-size: rem(16);
+  font-weight: $medium;
+  letter-spacing: 0.04em;
+  opacity: 0.5;
+
+  @include mq(md) {
+    font-size: rem(23);
+  }
 }
 
 .form__input:focus,
@@ -82,10 +113,15 @@
   font-size: rem(13);
   color: $text-black2;
   line-height: 1.5;
+
+  @include mq(md) {
+    font-size: rem(21);
+    font-weight: $medium;
+  }
 }
 
 .form__link {
-  color: $form-blue;
+  color: $button-front;
   text-decoration: underline;
 }
 
@@ -105,6 +141,6 @@
 
 .form__button .button {
   width: 100%;
-  max-width: rem(320);
+  max-width: rem(395);
   margin: 0 auto;
 }

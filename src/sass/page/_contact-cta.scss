@@ -1,0 +1,95 @@
+@use "global" as *;
+
+.contact-cta {
+  background: linear-gradient(
+    to top,
+    rgba(3, 168, 214, 1) 0%,
+    rgba(97, 200, 229, 1) 68%,
+    rgba(176, 222, 235, 1) 100%
+  );
+
+  padding: rem(40) 0;
+}
+
+.contact-cta__inner {
+}
+
+.contact-cta__wrapper {
+  background-color: $white;
+  border-radius: rem(20);
+  padding: rem(22);
+}
+
+.contact-cta__title {
+}
+
+.contact-cta__title .section-title__en {
+  color: $text-blue;
+}
+
+.contact-cta__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: rem(32);
+  flex-wrap: wrap;
+  text-align: center;
+  margin-top: rem(37);
+
+  @include mq(md) {
+    flex-direction: column;
+    gap: rem(24);
+  }
+}
+
+.contact-cta__tel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: rem(30);
+  font-weight: $bold;
+  color: $button-front;
+
+  @include mq(md) {
+    font-size: rem(26);
+  }
+}
+
+.contact-cta__tel-link {
+  display: flex;
+  align-items: center;
+  color: $button-front;
+  text-decoration: none;
+  gap: rem(8);
+}
+
+.contact-cta__tel-link:hover {
+  text-decoration: underline;
+}
+
+.contact-cta__tel-icon {
+  width: rem(25);
+  height: rem(25);
+  display: inline-block;
+}
+
+.contact-cta__tel-number {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.contact-cta__hours {
+  color: $text-black;
+  font-size: rem(14);
+  font-weight: $bold;
+  margin-top: rem(4);
+}
+
+.contact-cta__button {
+  width: rem(345);
+  text-align: center;
+
+  @include mq(md) {
+    width: rem(342);
+  }
+}

@@ -1,0 +1,99 @@
+@use "global" as *;
+
+/* グループ */
+.form__group--checkbox {
+  display: flex;
+  align-items: flex-start;
+  margin-top: rem(24);
+}
+
+/* ラベル */
+.form__checkbox-label--custom {
+  position: relative;
+  font-size: rem(13);
+  color: $text-black2;
+  line-height: 1.5;
+  cursor: pointer;
+  padding-left: rem(30);
+
+  @include mq(md) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* 元のチェックボックスを非表示 */
+.form__checkbox--custom {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* カスタムチェックボックスの外枠 */
+.form__checkbox-label--custom::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: rem(18);
+  width: rem(18);
+  background-color: $white;
+  border: 1px solid #999;
+  border-radius: rem(3);
+  transition: all 0.3s ease;
+}
+
+/* チェックマーク */
+.form__checkbox-label--custom::after {
+  content: "";
+  position: absolute;
+  left: rem(6);
+  top: 50%;
+  width: rem(6);
+  height: rem(10);
+  border: solid $white;
+  border-width: 0 2px 2px 0;
+  transform: translateY(-50%) rotate(45deg);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+/* チェックボックスがチェックされた時 */
+.form__checkbox--custom:checked + .form__checkbox-label--custom::before {
+  background-color: $form-blue;
+  border-color: $form-blue;
+}
+
+.form__checkbox--custom:checked + .form__checkbox-label--custom::after {
+  opacity: 1;
+}
+
+/* ホバー */
+.form__checkbox-label--custom:hover::before {
+  border-color: $form-blue;
+  box-shadow: 0 0 0 2px rgba(3, 168, 214, 0.1);
+}
+
+/* フォーカス */
+.form__checkbox--custom:focus + .form__checkbox-label--custom::before {
+  border-color: $form-blue;
+  box-shadow: 0 0 0 2px rgba(3, 168, 214, 0.2);
+}
+
+/* テキスト部分 */
+.form__checkbox-text {
+  display: inline;
+}
+
+/* リンク */
+.form__link--custom {
+  color: $form-blue;
+  text-decoration: underline;
+}
+
+.form__link--custom:hover {
+  text-decoration: none;
+}

@@ -39,8 +39,8 @@
       <h1 class="header__title">
         <a href="/" class="header__link" aria-label="トップページへ戻る">
           <picture>
-            <source media="(max-width: 767px)" srcset="./assets/images/common/header-logo_sp.svg">
-            <img class="header__logo" src="./assets/images/common/header-logo_pc.svg" alt="クラウド管理会社のロゴ" width="225"
+            <source media="(max-width: 767px)" srcset="./assets/images/header/header-logo_sp.svg">
+            <img class="header__logo" src="./assets/images/header/header-logo_pc.svg" alt="クラウド管理会社のロゴ" width="225"
               height="35" decoding="async" loading="lazy" fetchpriority="high">
           </picture>
         </a>
@@ -65,7 +65,7 @@
         <p class="header__tel">
           <a href="tel:05017916402" class="header__tel-link">
             <span class="header__tel-icon">
-              <img src="./assets/images/common/tel-icon.svg" alt="" width="25" height="25" loading="lazy"
+              <img src="./assets/images/icon/tel-icon.svg" alt="" width="25" height="25" loading="lazy"
                 decoding="async">
             </span>
             050-1791-6402
@@ -75,7 +75,7 @@
         <div class="header__button">
           <a href="#contact" class="button button--main">
             <span class="button__icon" aria-hidden="true">
-              <img src="./assets/images/common/mail-icon.svg" alt="" width="18" height="13" loading="lazy"
+              <img src="./assets/images/icon/mail-icon.svg" alt="" width="18" height="13" loading="lazy"
                 decoding="async">
             </span>
             <span class="button__text">お問い合わせ</span>
@@ -110,57 +110,76 @@
 
   <main>
     <section class="hero">
-      <div class="hero__inner inner">
-        <div class="hero__content">
-          <div class="hero__catch">
-            <p class="hero__catch-sub">低コスト管理、すでに<span class="hero__catch-highlight">2,000戸で実現！</span></p>
-            <h1 class="hero__catch-main">
-              <span class="hero__catch-line">マンション・アパートの</span>
-              <span class="hero__catch-emphasis">管理費を削減</span>
-            </h1>
+      <div class="hero__inner">
+        <div class="hero__wrappper">
+          <div class="hero__content">
+            <!-- 家形のキャッチコピー -->
+            <h2 class="hero__catch">
+              <div class="hero__catch-sub">低コスト管理、すでに<span class="hero__catch-highlight--number">2,000</span><span
+                  class="hero__catch-highlight">戸で実現&#33;</span></div>
+              <div class="hero__catch-main">
+                <span class="hero__catch-line">マンション・アパート</span>の<br>
+                <span class="hero__catch-emphasis">管理費</span>を<span class="hero__catch-emphasis">削減</span>
+              </div>
+            </h2>
+            <!-- ボタン -->
+            <div class="hero__cta">
+              <p class="hero__cta-note"><span>簡単<br><strong>1</strong>分</span></p>
+              <button class="hero__cta-button button">
+                <span class="button__text button__hero-text">今すぐ<span
+                    class="button__text button__hero-text--strong">相談</span>する</span>
+              </button>
+            </div>
           </div>
-          <div class="hero__badges">
-            <img src="images/badge-2000.png" alt="管理戸数2,000戸突破の実績を示すバッジ" class="hero__badge" loading="lazy" />
-            <img src="images/badge-2percent.png" alt="管理費が2%を示すバッジ" class="hero__badge" loading="lazy" />
+
+          <!-- 画像群 -->
+          <div class="hero__images">
+            <figure class="hero__image">
+              <picture>
+                <source srcset="./assets/images/common/hero-human_sp.svg" media="(max-width: 768px)" />
+                <img src="./assets/images/common/hero-human_pc.svg" alt="笑顔で手を挙げる女性が管理費削減をアピールしている写真" loading="lazy" />
+              </picture>
+            </figure>
+            <div class="hero__badges">
+              <img src="./assets/images/common/hero-badge_pc01.svg" alt="管理戸数2,000戸突破の実績を示すバッジ" class="hero__badge"
+                loading="lazy" />
+              <img src="./assets/images/common/hero-badge_pc02.svg" alt="管理費が2%を示すバッジ" class="hero__badge"
+                loading="lazy" />
+            </div>
           </div>
-          <div class="hero__cta">
-            <button class="button button--main">
-              <span class="button__text">今すぐ相談する ＞</span>
-            </button>
-            <p class="hero__cta-note">簡単1分</p>
-          </div>
-        </div>
-        <div class="hero__image">
-          <img src="images/hero-woman.png" alt="笑顔で手を挙げる女性が管理費削減をアピールしている写真" loading="lazy" />
+
         </div>
       </div>
     </section>
 
     <section class="problem">
       <div class="problem__inner inner">
-        <h2 class="problem__heading">こんなお悩みありませんか？</h2>
+        <h2 class="problem__heading">
+          こんな<span class="problem__emphasis">お悩み</span>ありませんか？
+        </h2>
         <div class="problem__content">
+          <div class="problem__image">
+            <img src="./assets/images/common/problem-image_pc.svg" alt="パソコンで作業している人物のイラスト" loading="lazy" />
+          </div>
           <ul class="problem__list">
             <li class="problem__item">
-              <img src="images/icon-trouble.png" alt="時間と手間がかかることを示すアイコン" class="problem__icon" loading="lazy" />
+              <img src="./assets/images/icon/problem-icon.svg" alt="" class="problem__icon" loading="lazy" />
               <p class="problem__text">時間と手間がかかる</p>
             </li>
             <li class="problem__item">
-              <img src="images/icon-trouble.png" alt="クレームやトラブルの対応に関するアイコン" class="problem__icon" loading="lazy" />
+              <img src="./assets/images/icon/problem-icon.svg" alt="" class="problem__icon" loading="lazy" />
               <p class="problem__text">クレームやトラブルの対応</p>
             </li>
             <li class="problem__item">
-              <img src="images/icon-trouble.png" alt="一部しか対応できない問題を示すアイコン" class="problem__icon" loading="lazy" />
+              <img src="./assets/images/icon/problem-icon.svg" alt="" class="problem__icon" loading="lazy" />
               <p class="problem__text">見た部分しか対応できない</p>
             </li>
           </ul>
-          <div class="problem__image">
-            <img src="images/illust-desk.png" alt="パソコンで作業している人物のイラスト" loading="lazy" />
-          </div>
         </div>
-        <div class="problem__solution">
-          <p class="problem__solution-text">その悩み、クラウド管理が解決します！</p>
-        </div>
+      </div>
+      <div class="problem__solution">
+        <p class="problem__solution-text">その悩み、クラウド管理が解決します！</p>
+        <div class="problem__solution-triangle"></div>
       </div>
     </section>
 
@@ -170,25 +189,21 @@
           <span class="section-title__en" aria-hidden="true">about&ensp;us</span>
           <span class="section-title__jp">クラウド管理とは？</span>
         </h2>
-        <div class="about__logos">
-          <div class="about__logo">
-            <img src="images/logo-cloud.png" alt="クラウド管理会社のロゴ" loading="lazy" />
-            <p class="about__company-name">クラウド管理会社</p>
-          </div>
-          <div class="about__symbol">
-            <img src="images/icon-x.png" alt="掛け合わせを示す記号" class="about__icon" loading="lazy" />
-          </div>
-          <div class="about__logo">
-            <img src="images/logo-taisei.png" alt="株式会社タイセイ・ハウジーのロゴ" loading="lazy" />
-            <p class="about__company-name">株式会社タイセイ・ハウジー</p>
-          </div>
-        </div>
-        <div class="about__description">
+
+        <figure class="about__logo">
+          <picture>
+            <source srcset="./assets/images/common/aboutus-image_sp.webp" media="(max-width: 768px)" />
+            <img src="./assets/images/common/aboutus-image_sp.webp" alt="株式会社クラウド管理会社と株式会社タイセイ・ハウジーのロゴ"
+              loading="lazy" />
+          </picture>
+        </figure>
+
+        <div class="about__text-area">
           <p class="about__text">
-            <strong>（株）クラウド管理会社と（株）タイセイ・ハウジー</strong>が提供する不動産管理共同サービスです
+            <strong>（株）クラウド管理会社</strong>と<br class="u-mobile"><strong>（株）タイセイ・ハウジー</strong>が<br>提供する不動管理共同サービスです
           </p>
-          <p class="about__text">
-            住民の皆さま住宅専用アプリをはじめ、連携を提供することで、暮らしの充実、ライフサポートをします。
+          <p class="about__description">
+            住民の皆さま住宅専用アプリをはじめ、装備を提供することで、<br>暮らしの充実、ライフサポートをします。
           </p>
         </div>
       </div>
@@ -196,60 +211,88 @@
 
     <section class="contact-cta">
       <div class="contact-cta__inner inner">
-        <h2 class="contact-cta__title section-title">
-          <span class="section-title__en" aria-hidden="true">contact</span>
-          <span class="section-title__jp">クラウド管理に問い合わせる</span>
-        </h2>
-        <div class="contact-cta__info">
-          <div class="contact-cta__tel">
-            <img src="images/icon-phone.png" alt="電話のアイコン" class="contact-cta__tel-icon" loading="lazy" />
-            <p class="contact-cta__tel-number">050-1791-6402</p>
-            <p class="contact-cta__tel-hours">受付時間：平日10:00〜18:00</p>
-          </div>
-          <div class="contact-cta__button">
-            <button class="button button--main">
-              <span class="button__text">まずは相談してみる</span>
-            </button>
+        <div class="contact-cta__wrapper">
+          <h2 class="contact-cta__title section-title">
+            <span class="section-title__en" aria-hidden="true">contact</span>
+            <span class="section-title__jp">クラウド管理に問い合わせる</span>
+          </h2>
+
+          <div class="contact-cta__info">
+            <div class="contact-cta__tel">
+              <a href="tel:05017916402" class="contact-cta__tel-link">
+                <span class="contact-cta__tel-icon">
+                  <img src="/assets/images/icon/tel-icon.svg" alt="電話番号" width="25" height="25" loading="lazy"
+                    decoding="async">
+                </span>
+                <span class="contact-cta__tel-number">050-1791-6402</span>
+              </a>
+              <p class="contact-cta__hours">受付時間：平日9:00〜18:00</p>
+            </div>
+            <div class="contact-cta__button">
+              <button class="button button--main">
+                <span class="button__text">まずは相談してみる</span>
+              </button>
+            </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
 
     <section class="expectation">
-      <div class="expectation__inner inner">
+      <div class="expectation__inner">
         <h2 class="expectation__title section-title">
           <span class="section-title__en" aria-hidden="true">expectation</span>
           <span class="section-title__jp">管理費が2%になると期待できること</span>
         </h2>
+
         <div class="expectation__cards">
-          <article class="expectation-card card card--expectation">
-            <div class="card__image">
-              <img src="images/expectation-card1.png" alt="住宅模型と資料が並ぶ利回り改善のイメージ" loading="lazy" />
+          <article class="expectation__card card card--expectation">
+            <figure class="card__image">
+              <picture>
+                <source srcset="./assets/images/common/expectation-card_sp01.webp" media="(max-width: 768px)" />
+                <img src="./assets/images/common/expectation-card_pc01.webp" alt="住宅模型と資料が並ぶ利回り改善のイメージ"
+                  loading="lazy" />
+              </picture>
+            </figure>
+            <div class="card__body">
+              <h3 class="card__title">利回りの改善</h3>
+              <p class="card__text">
+                管理費を抑えることで、物件からの収益増加を見込めます。これによって設備投資や再投資を検討することができ、より投資価値を高めることにつなげることが期待できます。
+              </p>
             </div>
-            <h3 class="card__title">利回りの改善</h3>
-            <p class="card__text">
-              管理費を抑えることで、特に持ち家の収益力を見直せます。その他の支出とバランスをとった経営が可能になります。
-            </p>
           </article>
 
-          <article class="expectation-card card card--expectation">
-            <div class="card__image">
-              <img src="images/expectation-card2.png" alt="パソコンで作業する長期的な安定性のイメージ" loading="lazy" />
+          <article class="expectation__card card card--expectation">
+            <figure class="card__image">
+              <picture>
+                <source srcset="./assets/images/common/expectation-card_sp02.webp" media="(max-width: 768px)" />
+                <img src="./assets/images/common/expectation-card_pc02.webp" alt="パソコンで作業する長期的な安定性のイメージ"
+                  loading="lazy" />
+              </picture>
+            </figure>
+            <div class="card__body">
+              <h3 class="card__title">長期的な経済安定性</h3>
+              <p class="card__text">
+                抑えた管理費から高速インターネット回線、クラウドカメラ、宅配ボックスなど住民の皆様からニーズの高い設備投資を行うことが可能となります。
+              </p>
             </div>
-            <h3 class="card__title">長期的な経済安定性</h3>
-            <p class="card__text">
-              クラウド管理なら、人件費削減・業務効率化によって、長期にわたる経済的な安定が見込めます。
-            </p>
           </article>
 
-          <article class="expectation-card card card--expectation">
-            <div class="card__image">
-              <img src="images/expectation-card3.png" alt="集合住宅と青空の設備投資の可能性を示す写真" loading="lazy" />
+          <article class="expectation__card card card--expectation">
+            <figure class="card__image">
+              <picture>
+                <source srcset="./assets/images/common/expectation-card_sp03.webp" media="(max-width: 768px)" />
+                <img src="./assets/images/common/expectation-card_pc03.webp" alt="集合住宅と青空の設備投資の可能性を示す写真"
+                  loading="lazy" />
+              </picture>
+            </figure>
+            <div class="card__body">
+              <h3 class="card__title">設備投資が可能</h3>
+              <p class="card__text">
+                管理費が低くなると、長期的に見れば多額の貯蓄に繋がります。この貯蓄を他の投資に回すことで、資産の成長や将来のリターンを向上させることができます。
+              </p>
             </div>
-            <h3 class="card__title">設備投資が可能</h3>
-            <p class="card__text">
-              管理費が低くなると、長期的に見れば資金が浮き、住宅設備や環境への再投資が可能になります。
-            </p>
           </article>
         </div>
       </div>
@@ -261,9 +304,14 @@
           <span class="section-title__en" aria-hidden="true">management&ensp;services</span>
           <span class="section-title__jp">不動産の管理業務について</span>
         </h2>
-        <div class="management-services__logo">
-          <img src="images/logo-taisei.png" alt="株式会社タイセイ・ハウジーのロゴ" loading="lazy" />
-        </div>
+
+        <figure class="management-services__logo">
+          <picture>
+            <source srcset="./assets/images/common/TaiseiHousy-logo_sp.svg" media="(max-width: 768px)" />
+            <img src="./assets/images/common/TaiseiHousy-logo_pc.svg" alt="株式会社タイセイ・ハウジーのロゴ" loading="lazy" />
+          </picture>
+        </figure>
+
         <div class="management-services__description">
           <p class="management-services__text">
             2%の管理費用だからといって手抜き管理にはなりません。<br />
@@ -272,67 +320,102 @@
           </p>
         </div>
         <div class="management-services__stats">
-          <article class="card card--stat management-services__stat-card">
-            <h3 class="card__title">管理戸数実績</h3>
-            <p class="card__value"><span class="card__value-number">90,000</span>戸以上</p>
-          </article>
-          <article class="card card--stat management-services__stat-card">
-            <h3 class="card__title">法人からの社宅依頼</h3>
-            <p class="card__value"><span class="card__value-number">800</span>社以上</p>
-          </article>
+          <div class="management-stats management-services__stat-card">
+            <h3 class="management-stats__title">管理戸数実績</h3>
+            <p class="management-stats__value">
+              <span class="management-stats__number">90,000</span><span class="management-stats__unit">戸</span>以上
+            </p>
+          </div>
+          <div class="management-stats management-services__stat-card">
+            <h3 class="management-stats__title">法人からの社宅依頼</h3>
+            <p class="management-stats__value">
+              <span class="management-stats__number">800</span><span
+                class="management-stats__unit management-stats--unit-space">社</span>以上
+            </p>
+          </div>
         </div>
+
       </div>
     </section>
 
     <section class="feature">
-      <div class="feature__inner inner">
+      <div class="feature__inner">
         <h2 class="feature__title section-title">
           <span class="section-title__en" aria-hidden="true">feature</span>
           <span class="section-title__jp">クラウド管理の3つの機能</span>
         </h2>
+
         <div class="feature__cards">
-          <article class="feature-card card card--feature">
-            <div class="card__image">
-              <img src="images/feature1.png" alt="不動産管理を行う人の写真" loading="lazy" />
+          <!-- ループ開始 -->
+          <article class="feature__card feature-card">
+            <div class="feature-card__background" aria-hidden="true">
+              <picture>
+                <source srcset="./assets/images/common/feature-common-image_sp.webp" media="(max-width: 768px)" />
+                <img src="./assets/images/common/feature-common-image_pc.webp" alt="空から撮影した都市の街並み" loading="lazy" />
+              </picture>
             </div>
-            <div class="card__body">
-              <h3 class="card__title">
+            <figure class="feature-card__image">
+              <picture>
+                <source srcset="./assets/images/common/feature-image_sp01.webp" media="(max-width: 768px)" />
+                <img src="./assets/images/common/feature-image_pc01.webp" alt="不動産管理を行う人の様子" loading="lazy" />
+              </picture>
+            </figure>
+            <div class="feature-card__body">
+              <h3 class="feature-card__title">
                 <span class="feature-card__index">1.</span> 不動産管理業務
               </h3>
-              <p class="card__text">
+              <p class="feature-card__text">
                 2%だからといって手抜き管理にはなりません。一般的な管理業務を提供します。
               </p>
             </div>
           </article>
-
-          <article class="feature-card card card--feature">
-            <div class="card__image">
-              <img src="images/feature2.png" alt="複数人がスマートフォンを操作している様子" loading="lazy" />
+          <!-- ループ終了 -->
+          <article class="feature__card feature-card feature-card--reverse">
+            <div class="feature-card__background" aria-hidden="true">
+              <picture>
+                <source srcset="./assets/images/common/feature-common-image_sp.webp" media="(max-width: 768px)" />
+                <img src="./assets/images/common/feature-common-image_pc.webp" alt="空から撮影した都市の街並み" loading="lazy" />
+              </picture>
             </div>
-            <div class="card__body">
-              <h3 class="card__title">
-                <span class="feature-card__index">2.</span> マンションDX
+            <figure class="feature-card__image">
+              <picture>
+                <source srcset="./assets/images/common/feature-image_sp02.webp" media="(max-width: 768px)" />
+                <img src="./assets/images/common/feature-image_pc02.webp" alt="複数人がスマートフォンを操作している様子" loading="lazy" />
+              </picture>
+            </figure>
+            <div class="feature-card__body feature-card--wide">
+              <h3 class="feature-card__title">
+                <span class="feature-card__index">2.</span>マンションDX
               </h3>
-              <p class="card__text">
-                マンションにDX機能をご提供。機能をパワーアップ可能です。<br />
-                （例）導入・安否確認通知
+              <p class="feature-card__text">
+                マンションにDX装備をご提案。設備をパワーアップ可能です。 <br>(※)導入・保守費用は別途
+              </p>
+            </div>
+
+          </article>
+          <article class="feature__card feature-card">
+            <div class="feature-card__background" aria-hidden="true">
+              <picture>
+                <source srcset="./assets/images/common/feature-common-image_sp.webp" media="(max-width: 768px)" />
+                <img src="./assets/images/common/feature-common-image_pc.webp" alt="空から撮影した都市の街並み" loading="lazy" />
+              </picture>
+            </div>
+            <figure class="feature-card__image">
+              <picture>
+                <source srcset="./assets/images/common/feature-image_sp03.webp" media="(max-width: 768px)" />
+                <img src="./assets/images/common/feature-image_pc03.webp" alt="清潔なタオルを持つ人の写真" loading="lazy" />
+              </picture>
+            </figure>
+            <div class="feature-card__body">
+              <h3 class="feature-card__title">
+                <span class="feature-card__index">3.</span>長期的な経済安定性
+              </h3>
+              <p class="feature-card__text">
+                住宅専用アプリとしてコストコ買い物代行、家電レンタルなどを利用可能です。
               </p>
             </div>
           </article>
 
-          <article class="feature-card card card--feature">
-            <div class="card__image">
-              <img src="images/feature3.png" alt="清潔なタオルを持つ人の写真" loading="lazy" />
-            </div>
-            <div class="card__body">
-              <h3 class="card__title">
-                <span class="feature-card__index">3.</span> 長期的な経済安定性
-              </h3>
-              <p class="card__text">
-                住宅専用アプリとしてコスト削減や貸し出し、家賃シミュレータなどを利用可能です。
-              </p>
-            </div>
-          </article>
         </div>
       </div>
     </section>
@@ -344,28 +427,32 @@
           <span class="section-title__jp">お客様の声</span>
         </h2>
         <div class="voice__cards">
-          <article class="card card--voice voice__card">
-            <div class="card__image">
-              <img src="images/voice1.png" alt="マンションオーナーA様の顔写真" loading="lazy" />
-            </div>
+          <article class="voice__card card card--voice">
+            <figure class="card__image card--voice-image">
+              <picture>
+                <source srcset="./assets/images/common/voice-card_sp01.webp" media="(max-width: 768px)" />
+                <img src="./assets/images/common/voice-card_pc01.webp" alt="マンションオーナーA様の顔写真" loading="lazy" />
+              </picture>
+            </figure>
             <div class="card__body">
-              <h3 class="card__title">マンションオーナー　A様</h3>
+              <h3 class="card__title">マンションオーナー&emsp;A様</h3>
               <p class="card__text">
-                他の業務も行っているので管理に時間がかかっていましたが、クラウド管理を導入して時間と手間が減りました！
-                これからもよろしくお願いします。
+                他の事業も行っているので管理に時間がかかっていましたが、クラウド管理を導入して時間と手間が減りました！<br>これからもよろしくお願いします。
               </p>
             </div>
           </article>
 
           <article class="card card--voice voice__card">
-            <div class="card__image">
-              <img src="images/voice2.png" alt="アパートオーナーB様の顔写真" loading="lazy" />
-            </div>
+            <figure class="card__image card--voice-image">
+              <picture>
+                <source srcset="./assets/images/common/voice-card_sp02.webp" media="(max-width: 768px)" />
+                <img src="./assets/images/common/voice-card_pc02.webp" alt="アパートオーナーB様の顔写真" loading="lazy" />
+              </picture>
+            </figure>
             <div class="card__body">
-              <h3 class="card__title">アパートオーナー　B様</h3>
+              <h3 class="card__title">アパートオーナー&emsp;B様</h3>
               <p class="card__text">
-                トラブルも1人では対応しきれないと悩みが増えました。<br />
-                住宅管理用アプリを導入し、様々なサポートしてくださり助かっています！
+                トラブルなど1人では対応しきれない悩みが改善しました。<br>また住民専用アプリもあり、様々なサポートをしてくださり感謝しています！
               </p>
             </div>
           </article>
@@ -382,41 +469,55 @@
         <form action="#" method="post" class="contact-form__form-area form">
           <div class="form__group">
             <label for="name" class="form__label">
-              <span class="form__required">必須</span> お名前
+              <span class="form__required">必須</span>
+              <span class="form__label-text">お名前</span>
             </label>
-            <input type="text" id="name" name="name" class="form__input" />
+            <input type="text" id="name" name="name" placeholder="例：山田花子" class="form__input" />
           </div>
 
           <div class="form__group">
             <label for="email" class="form__label">
-              <span class="form__required">必須</span> メールアドレス
+              <span class="form__required">必須</span>
+              <span class="form__label-text">メールアドレス</span>
             </label>
-            <input type="email" id="email" name="email" class="form__input" />
+            <input type="email" id="email" name="email" placeholder="例：sample@sample.jp" class="form__input" />
           </div>
 
           <div class="form__group">
-            <label for="tel" class="form__label">電話番号</label>
-            <input type="tel" id="tel" name="tel" class="form__input" />
+            <label for="tel" class="form__label">
+              <span class="form__label-text">電話番号</span>
+            </label>
+            <input type="tel" id="tel" name="tel" placeholder="例：00000000000(ハイフンなし)" class="form__input" />
           </div>
 
           <div class="form__group">
-            <label for="address" class="form__label">管理物件の住所</label>
+            <label for="address" class="form__label">
+              <span class="form__required">必須</span>
+              <span class="form__label-text">管理物件の住所</span>
+            </label>
             <input type="text" id="address" name="address" class="form__input" />
           </div>
 
           <div class="form__group">
             <label for="message" class="form__label">
-              <span class="form__required">必須</span> お問い合わせ内容
+              <span class="form__required">必須</span>
+              <span class="form__label-text">お問い合わせ内容</span>
             </label>
-            <textarea id="message" name="message" rows="5" class="form__textarea"></textarea>
+            <textarea id="message" name="message" rows="10" placeholder="ご質問やお悩みなどお気軽にご入力ください。"
+              class="form__textarea"></textarea>
           </div>
 
           <div class="form__group form__group--checkbox">
-            <label class="form__checkbox-label">
-              <input type="checkbox" name="agree" class="form__checkbox" />
-              上記に同意し、
-              <a href="/privacy-policy" class="form__link" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>
-              に同意します。
+            <input type="checkbox" id="agree" name="agree" class="form__checkbox form__checkbox--custom" />
+            <label for="agree" class="form__checkbox-label form__checkbox-label--custom">
+              上記を確認し、<br class="u-mobile">
+              <span class="form__checkbox-text">
+                <a href="/privacy-policy" class="form__link form__link--custom" target="_blank"
+                  rel="noopener noreferrer">
+                  プライバシーポリシー
+                </a>
+                に同意する。
+              </span>
             </label>
           </div>
 

@@ -1,0 +1,120 @@
+@use "global" as *;
+
+.management-services {
+  padding-top: rem(80);
+  padding-bottom: rem(150);
+
+  @include mq(md) {
+    padding-top: rem(48);
+    padding-bottom: rem(65);
+  }
+}
+
+.management-services__inner {
+}
+
+.management-services__title {
+}
+
+.management-services__logo {
+  max-width: rem(368);
+  width: 100%;
+  margin: 0 auto;
+
+  @include mq(md) {
+    max-width: rem(363);
+    margin-top: rem(36);
+  }
+}
+
+.management-services__description {
+  margin-top: rem(49);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: rem(831);
+  width: 100%;
+
+  @include mq(md) {
+    max-width: rem(395);
+    margin-top: rem(46);
+  }
+}
+
+.management-services__text {
+  font-size: rem(20);
+  font-weight: $regular;
+  color: $text-black;
+}
+
+.management-services__stats {
+  margin-top: rem(17);
+  display: flex;
+  justify-content: center;
+  padding: rem(25);
+  border: 2px solid $form-blue;
+  border-radius: rem(20);
+  background-color: $white;
+  max-width: rem(830);
+  margin: 0 auto;
+  flex-wrap: wrap;
+  text-align: center;
+
+  @include mq(md) {
+    margin-top: rem(16);
+    padding-top: rem(27);
+  }
+}
+
+.management-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mq(md) {
+  }
+}
+
+.management-stats:not(:first-child) {
+  @include mq(md) {
+    margin-top: rem(32);
+  }
+}
+
+.management-stats__title {
+  color: $text-blue;
+  font-size: rem(24);
+  font-weight: $bold;
+
+  @include mq(md) {
+    font-size: rem(26);
+  }
+}
+
+.management-stats__value {
+  font-size: rem(28);
+}
+
+.management-stats__number {
+  color: $button-front;
+  font-size: rem(70);
+  font-weight: bold;
+  letter-spacing: 0.06em;
+  font-family: $numbers-font-family;
+
+  @include mq(md) {
+    font-size: rem(72);
+  }
+}
+
+.management-stats__unit {
+  font-weight: bold;
+  font-size: rem(48);
+
+  @include mq(md) {
+    font-size: rem(42);
+  }
+}
+
+.management-stats--unit-space {
+  margin-left: 0.5em;
+}

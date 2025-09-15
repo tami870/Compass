@@ -57,9 +57,9 @@ img {
 }
 
 /* Natural flow and rhythm in articles by default */
-article > * + * {
-  margin-top: 1em;
-}
+// article > * + * {
+//   margin-top: 1em;
+// }
 
 /* Inherit fonts for inputs and buttons */
 input,
@@ -73,7 +73,6 @@ select {
 img:not([alt]) {
   filter: blur(10px);
 }
-
 
 /* フォームリセット */
 input,
@@ -90,14 +89,22 @@ textarea {
   outline: none;
 }
 
+/* チェックボックスとラジオボタンはデフォルトスタイルを維持 */
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-appearance: checkbox;
+  -moz-appearance: checkbox;
+  appearance: checkbox;
+}
+
 textarea {
   resize: vertical;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
-  display: none;
-}
+// input[type="checkbox"],
+// input[type="radio"] {
+//   display: none;
+// }
 
 input[type="submit"],
 input[type="button"],

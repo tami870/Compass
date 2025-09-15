@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.voice {
+  position: relative;
+  padding-top: rem(97);
+  padding-bottom: rem(163);
+  background-image: url(../images/common/background01.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  @include mq(md) {
+    padding-top: rem(46);
+    padding-bottom: rem(51);
+  }
+}
+
+.voice__inner {
+}
+
+.voice__title {
+}
+
+.voice__cards {
+  margin-top: rem(49);
+
+  @include mq(md) {
+    margin-top: rem(46);
+  }
+}
+
+.voice__card {
+}

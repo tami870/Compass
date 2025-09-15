@@ -1,0 +1,267 @@
+@use "global" as *;
+
+.hero {
+  background-image: url(../images/common/hero-background_pc.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: rem(60) 0;
+  position: relative;
+  overflow: hidden;
+  height: rem(746);
+
+  @include mq(md) {
+    background-image: url(../images/common/hero-background_sp.jpg);
+    height: rem(730);
+    padding: rem(35) 0;
+  }
+}
+
+.hero__inner {
+}
+
+.hero__wrappper {
+  display: flex;
+
+  @include mq(md) {
+    flex-direction: column;
+  }
+}
+
+.hero__content {
+  @include mq(md) {
+    position: relative;
+  }
+}
+
+.hero__catch {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: rem(52) rem(24);
+  text-align: center;
+  width: 100%;
+  max-width: rem(750);
+  margin: 0 auto;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 0% 100%, 0% 25%);
+  position: relative;
+
+  @include mq(md) {
+    padding: rem(52) rem(16) rem(20);
+    max-width: rem(460);
+  }
+}
+
+.hero__catch-sub {
+  display: inline-block;
+  font-size: rem(20);
+  font-weight: $medium;
+  color: $text-black;
+  border-bottom: 1px solid $text-black2;
+  padding-bottom: rem(2);
+
+  @include mq(md) {
+    font-size: rem(15);
+  }
+}
+
+.hero__catch-sub::after {
+  content: "";
+  position: absolute;
+  top: 31%;
+  left: 56%;
+  width: rem(36);
+  height: rem(2);
+  background: $text-black2;
+  transform: rotate(135deg);
+
+  @include mq(md) {
+    top: 36.7%;
+    left: 54%;
+  }
+}
+
+.hero__catch-highlight {
+  font-size: rem(34);
+  font-weight: $bold;
+  color: $form-blue;
+
+  @include mq(md) {
+    font-size: rem(24);
+    font-weight: $medium;
+  }
+}
+
+.hero__catch-highlight--number {
+  font-family: $numbers-font-family;
+  font-size: rem(55);
+  color: $form-blue;
+
+  @include mq(md) {
+    font-size: rem(35);
+  }
+}
+
+.hero__catch-main {
+  margin-top: rem(20);
+  font-size: rem(50);
+  font-weight: $bold;
+  line-height: 1.6;
+  color: $text-black;
+
+  @include mq(md) {
+    font-size: rem(32);
+  }
+}
+
+.hero__catch-line {
+  display: block;
+  font-size: rem(70);
+  font-weight: $bold;
+  line-height: 1.142;
+  color: $text-blue;
+
+  @include mq(md) {
+    font-size: rem(42);
+  }
+}
+
+.hero__catch-emphasis {
+  font-size: rem(100);
+  font-weight: $bold;
+  line-height: 1.142;
+  letter-spacing: 0.05em;
+  color: $text-black;
+
+  @include mq(md) {
+    font-size: rem(66);
+  }
+}
+
+.hero__cta {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hero__cta-note {
+  width: rem(108);
+  background-color: $white;
+  border: 2px solid $button-front;
+  color: $text-black;
+  line-height: 1;
+  padding: rem(14) rem(18);
+  border-radius: 50%;
+  text-align: center;
+  z-index: 20;
+
+  @include mq(md) {
+    width: rem(80);
+    padding: rem(11) rem(11);
+  }
+}
+
+.hero__cta-note span {
+  font-size: rem(30);
+  font-weight: $bold;
+
+  @include mq(md) {
+    font-size: rem(22);
+  }
+}
+
+.hero__cta-note strong {
+  font-size: rem(45);
+  letter-spacing: 0.05em;
+  color: #be1d2c;
+  font-weight: $bold;
+
+  @include mq(md) {
+    font-size: rem(33);
+  }
+}
+
+.hero__cta-button {
+  width: rem(400);
+  height: rem(90);
+  position: absolute;
+  top: 0;
+  left: -5%;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(8);
+  cursor: pointer;
+
+  @include mq(md) {
+    width: rem(300);
+    height: rem(80);
+    top: 0;
+    left: -5%;
+  }
+}
+
+.hero__cta-button::after {
+  content: "";
+  display: inline-block;
+  width: rem(8);
+  height: rem(8);
+  border-top: 2px solid $text-black;
+  border-right: 2px solid $white;
+  transform: rotate(45deg);
+  margin-left: rem(8);
+  vertical-align: middle;
+  z-index: 100;
+
+  @include mq(md) {
+  }
+}
+
+.hero__images {
+  position: relative;
+  width: 45%;
+
+  @include mq(md) {
+    width: 100%;
+  }
+}
+
+.hero__image {
+  max-width: rem(628);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+  right: 22%;
+  bottom: -14%;
+
+  @include mq(md) {
+    max-width: rem(343);
+    right: -2%;
+    bottom: 0;
+    top: 1%;
+  }
+}
+
+.hero__image img {
+  width: 100%;
+  height: auto;
+}
+
+.hero__badges {
+  display: flex;
+  position: absolute;
+  z-index: 20;
+  bottom: -6%;
+  right: 5%;
+  width: 100%;
+
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.hero__badge {
+  max-width: rem(193);
+  width: 100%;
+  height: auto;
+}

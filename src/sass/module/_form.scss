@@ -45,7 +45,7 @@
   font-size: rem(10);
   font-weight: $regular;
   color: $white;
-  background-color: $button-front;
+  background-color: $color-accent;
   padding: rem(3) rem(8);
 
   @include mq(md) {
@@ -121,7 +121,7 @@
 }
 
 .form__link {
-  color: $button-front;
+  color: $color-accent;
   text-decoration: underline;
 }
 

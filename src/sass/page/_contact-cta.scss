@@ -48,7 +48,7 @@
   align-items: center;
   font-size: rem(30);
   font-weight: $bold;
-  color: $button-front;
+  color: $color-accent;
 
   @include mq(md) {
     font-size: rem(26);
@@ -58,7 +58,7 @@
 .contact-cta__tel-link {
   display: flex;
   align-items: center;
-  color: $button-front;
+  color: $color-accent;
   text-decoration: none;
   gap: rem(8);
 }

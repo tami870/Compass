@@ -12,7 +12,7 @@ $mediaquerys: (
 @if $startFrom == sp {
   //スマホファースト
   $breakpoints: (
-    sm: 600,
+    sm: 500,
     md: 768,
     lg: 1024,
     xl: 1440,
@@ -30,7 +30,7 @@ $mediaquerys: (
     xl: 1440,
     lg: 1023,
     md: 767,
-    sm: 600,
+    sm: 500,
   );
   $mediaquerys: (
     sm: "screen and (max-width: #{map-get($breakpoints,'sm')}px)",

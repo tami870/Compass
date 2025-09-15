@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="robots" content="noindex" /> <!-- 本番では index,follow に切り替え -->
+
+  <!-- meta情報 -->
+  <title>クラウド管理 ｜ お問い合わせ内容の確認</title>
+  <meta name="description" content="" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <!-- jQuery -->
+  <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- JavaScript -->
+  <script defer src="./assets/js/script.js"></script>
+</head>
+
+<body>
+  <main class="contact-confirm">
+    <div class="contact-confirm__inner">
+      <h1 class="contact-confirm__title">お問い合わせ内容の確認</h1>
+
+      <form action="send.php" method="post" class="contact-confirm__form">
+        <dl class="contact-confirm__list">
+          <div class="contact-confirm__item">
+            <dt class="contact-confirm__item-title">お名前</dt>
+            <dd class="contact-confirm__item-value">山田&ensp;太郎</dd>
+          </div>
+
+          <div class="contact-confirm__item">
+            <dt class="contact-confirm__item-title">メールアドレス</dt>
+            <dd class="contact-confirm__item-value">sample@example.com</dd>
+          </div>
+
+          <div class="contact-confirm__item">
+            <dt class="contact-confirm__item-title">電話番号</dt>
+            <dd class="contact-confirm__item-value">090-0000-0000</dd>
+          </div>
+
+          <div class="contact-confirm__item">
+            <dt class="contact-confirm__item-title">管理物件の住所</dt>
+            <dd class="contact-confirm__item-value">東京都千代田区◯◯‐◯◯</dd>
+          </div>
+
+          <div class="contact-confirm__item">
+            <dt class="contact-confirm__item-title">お問い合わせ内容</dt>
+            <dd class="contact-confirm__item-value">サービスについて詳しく知りたい</dd>
+          </div>
+
+        </dl>
+
+        <!-- hiddenで値を送信 -->
+        <input type="hidden" name="name" value="山田 太郎" />
+        <input type="hidden" name="email" value="sample@example.com" />
+        <input type="hidden" name="tel" value="090-0000-0000" />
+        <input type="hidden" name="address" value="東京都千代田区◯◯‐◯◯" />
+        <input type="hidden" name="message" value="サービスについて詳しく知りたい" />
+
+        <div class="contact-confirm__buttons">
+          <button type="button" class="button button--back" onclick="history.back()"><span
+              class="button__text">修正する</span></button>
+          <button type="submit" class="button"><span class="button__text">送信する</span></button>
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+@use "global" as *;
+
+.contact-thanks {
+  margin-top: rem(100);
+}
+
+.contact-thanks__title {
+  font-size: rem(48);
+  font-weight: $bold;
+  text-align: center;
+
+  @include mq(md) {
+    font-size: rem(24);
+  }
+}
+
+.contact-thanks__message {
+  margin-top: rem(24);
+  font-size: rem(24);
+  font-weight: $medium;
+  text-align: center;
+
+  @include mq(md) {
+    margin-top: rem(16);
+    font-size: rem(16);
+  }
+}
+
+// 幅500px以下改行
+.contact-thanks--br {
+  display: none;
+
+  @include mq(sm) {
+    display: block;
+  }
+}
+
+.contact-thanks__action {
+  margin-top: rem(32);
+  text-align: center;
+
+  @include mq(md) {
+    margin-top: rem(48);
+  }
+}

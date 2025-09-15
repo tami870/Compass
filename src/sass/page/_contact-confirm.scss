@@ -1,0 +1,57 @@
+@use "global" as *;
+
+.contact-confirm {
+  margin-top: rem(100);
+}
+
+.contact-confirm__inner {
+  max-width: rem(400);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: rem(25);
+  padding-right: rem(25);
+
+  @include mq(md) {
+    padding-left: rem(20);
+    padding-right: rem(20);
+  }
+}
+
+.contact-confirm__title {
+  font-size: rem(24);
+  font-weight: $bold;
+  text-align: center;
+}
+
+.contact-confirm__form {
+  max-width: rem(400);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.contact-confirm__list {
+  margin-top: rem(32);
+}
+
+.contact-confirm__item {
+  margin-top: rem(16);
+}
+
+.contact-confirm__item-title {
+  font-weight: $bold;
+}
+
+.contact-confirm__item-value {
+  margin-left: rem(16);
+  padding-top: rem(8);
+  padding-bottom: rem(8);
+}
+
+.contact-confirm__buttons {
+  margin-top: rem(32);
+  display: flex;
+  gap: rem(16);
+  justify-content: center;
+}

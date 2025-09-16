@@ -54,8 +54,8 @@
 .cta-button::after {
   content: "";
   position: absolute;
-  right: rem(12);
-  top: 54%;
+  right: 10%;
+  top: 51%;
   width: rem(24);
   height: rem(24);
   transform: translateY(-50%);
@@ -75,6 +75,11 @@
 
   // 右半分だけ残して「＞」の形にする
   clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+
+  @include mq(md) {
+    right: 8%;
+    top: 48%;
+  }
 }
 
 // テキストを前面に出す
@@ -87,6 +92,7 @@
   font-size: rem(30);
   font-weight: $bold;
   padding-left: 1em;
+  letter-spacing: 0;
 
   @include mq(md) {
     font-size: rem(22);

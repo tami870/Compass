@@ -9,13 +9,28 @@
   }
 }
 
+.feature-card--reverse {
+  @include mq(md) {
+    margin-top: rem(-108);
+  }
+}
+
+.feature-card:nth-child(3) {
+  @include mq(md) {
+    position: absolute;
+    width: 100%;
+    top: 116.3%;
+    left: auto;
+    right: 0;
+  }
+}
+
 .feature-card__background {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 1.7%;
   z-index: 10;
   max-width: rem(750);
-  opacity: 0.3;
 
   @include mq(md) {
     display: none;
@@ -23,7 +38,8 @@
 }
 
 .feature-card--reverse .feature-card__background {
-  left: 0;
+  top: 5%;
+  left: -1.2%;
   right: auto;
 }
 
@@ -36,27 +52,37 @@
 
 .feature-card__image {
   position: absolute;
-  top: 13%;
-  left: 0;
+  top: 13.5%;
+  left: -1.5%;
   z-index: 20;
   max-width: rem(570);
   width: 100%;
 
   @include mq(md) {
     max-width: rem(494);
-    top: 42%;
+    top: 44%;
     left: auto;
     right: 0;
   }
 }
 
 .feature-card--reverse .feature-card__image {
+  position: absolute;
   left: auto;
-  right: 0;
+  right: 1.6%;
 
   @include mq(md) {
+    top: 64%;
     left: 0;
     right: auto;
+  }
+}
+
+.feature-card:nth-child(3) .feature-card__image {
+  @include mq(md) {
+    position: absolute;
+    top: 36%;
+    right: 1%;
   }
 }
 
@@ -72,11 +98,14 @@
 
 .feature-card__body {
   position: absolute;
-  top: 20%;
-  right: 4%;
+  top: 19%;
+  right: 5.4%;
   background-color: $white;
   max-width: rem(470);
-  padding: rem(35) rem(56);
+  padding-top: rem(34);
+  padding-right: rem(56);
+  padding-bottom: rem(36);
+  padding-left: rem(64);
   z-index: 30;
 
   @include mq(md) {
@@ -85,18 +114,26 @@
     left: 4%;
     max-width: rem(447);
     height: rem(263);
-    padding: rem(32) rem(40);
+    padding: rem(27) rem(32);
   }
 }
 
 .feature-card--reverse .feature-card__body {
+  top: 22%;
   right: auto;
-  left: 4%;
+  left: 2.4%;
 
   @include mq(md) {
     right: auto;
-    left: 1%;
+    left: 4.4%;
   }
+}
+
+.feature-card:nth-child(3) .feature-card__body {
+  padding: rem(26) rem(46) rem(26);
+  line-height: 1;
+  height: rem(223);
+  font-size: rem(24);
 }
 
 .feature-card--wide {
@@ -109,6 +146,10 @@
   font-size: rem(30);
   font-weight: bold;
   color: $form-blue;
+
+  @include mq(md) {
+    font-size: rem(32);
+  }
 }
 
 .feature-card__text {
@@ -121,5 +162,6 @@
   @include mq(md) {
     font-size: rem(21);
     line-height: 1.88;
+    margin-top: rem(20);
   }
 }

@@ -2,15 +2,15 @@
 
 .expectation {
   padding-top: rem(98);
-  padding-bottom: rem(141);
+  padding-bottom: rem(62);
   background-image: url(../images/common/background01.svg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 
   @include mq(md) {
-    padding-top: rem(48);
-    padding-bottom: rem(46);
+    padding-top: rem(53);
+    padding-bottom: rem(27);
   }
 }
 
@@ -34,13 +34,13 @@
 .expectation__cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: rem(65);
-  margin-top: rem(45);
+  gap: rem(60);
+  margin-top: rem(40);
   align-items: stretch; //カードの高さを揃える
 
   @include mq(md) {
     grid-template-columns: 1fr;
-    gap: rem(16);
+    gap: rem(29);
     margin-top: rem(61);
   }
 }
@@ -49,8 +49,7 @@
   height: 100%; //カードの高さを揃える
   display: flex;
   flex-direction: column;
-  // justify-content: flex-start;
-  padding: rem(30) rem(35);
+  padding: rem(21);
 
   @include mq(md) {
     padding: rem(28) rem(43.5);

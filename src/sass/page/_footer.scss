@@ -3,8 +3,6 @@
 .footer {
   background-color: $white;
   padding-top: rem(80);
-  padding-left: rem(0);
-  padding-right: rem(0);
   padding-bottom: rem(88);
   color: $text-black;
   font-weight: $regular;
@@ -17,8 +15,8 @@
 
 .footer__inner {
   max-width: $inner + strip-unit($padding-pc) * 2;
-  padding-right: $padding-pc;
-  padding-left: $padding-pc;
+  padding-right: rem(15);
+  padding-left: rem(15);
   width: 100%;
   margin-right: auto;
   margin-left: auto;
@@ -70,14 +68,17 @@
 
   @include mq(md) {
     flex-wrap: wrap;
-    width: 70%;
-    gap: rem(32);
+    width: 90%;
+    row-gap: rem(22);
+    column-gap: rem(44);
   }
 }
 
 .footer__nav-item {
   padding-left: rem(16);
   padding-right: rem(16);
+  padding-top: rem(10);
+  padding-bottom: rem(10);
 
   @include mq(md) {
     padding: 0;
@@ -94,7 +95,7 @@
 }
 
 .footer__bottom {
-  margin-top: rem(58);
+  margin-top: rem(63);
   font-size: rem(13);
 
   @include mq(md) {
@@ -118,8 +119,9 @@
 
 .footer__copyright {
   text-align: center;
+  margin-top: rem(-30);
 
   @include mq(md) {
-    margin-top: rem(56);
+    margin-top: rem(38);
   }
 }

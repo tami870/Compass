@@ -2,7 +2,7 @@
 
 .voice {
   position: relative;
-  padding-top: rem(97);
+  padding-top: rem(100);
   padding-bottom: rem(163);
   background-image: url(../images/common/background01.svg);
   background-repeat: no-repeat;
@@ -10,8 +10,8 @@
   background-size: cover;
 
   @include mq(md) {
-    padding-top: rem(46);
-    padding-bottom: rem(51);
+    padding-top: rem(50);
+    padding-bottom: rem(54);
   }
 }
 
@@ -22,12 +22,19 @@
 }
 
 .voice__cards {
-  margin-top: rem(49);
+  margin-top: rem(44);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: rem(0);
 
   @include mq(md) {
-    margin-top: rem(46);
+    grid-template-columns: 1fr;
+    gap: rem(58);
   }
 }
 
 .voice__card {
+  max-width: rem(483);
+  width: 100%;
+  margin: 0 auto;
 }

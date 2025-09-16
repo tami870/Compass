@@ -1,14 +1,14 @@
 @use "global" as *;
 
 .feature {
-  padding-top: rem(58);
+  padding-top: rem(76);
   padding-bottom: rem(106);
   background-color: $background-blue;
   height: rem(1519);
   position: relative;
 
   @include mq(md) {
-    padding-top: rem(18);
+    padding-top: rem(13);
     padding-bottom: rem(56);
     height: rem(1736);
   }
@@ -41,12 +41,11 @@
 .feature__cards {
   display: flex;
   flex-direction: column;
-  gap: rem(80);
-  margin-top: rem(61);
+  gap: rem(64);
+  margin-top: rem(56);
   margin-right: auto;
   margin-left: auto;
-  width: clamp(rem(800), 73.21vw, rem(1200));
-
+  width: clamp(rem(500), 73.21vw, rem(1200));
   position: relative;
   z-index: 10;
 
@@ -62,5 +61,4 @@
   flex-direction: column;
   gap: rem(52);
   position: relative;
-  overflow: hidden;
 }

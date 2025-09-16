@@ -27,10 +27,6 @@ html {
   }
 }
 
-:root {
-  --header-height: rem(70);
-}
-
 .drawer-menu.is-open {
   display: block;
   animation: fadeIn 0.3s ease;
@@ -50,7 +46,10 @@ html {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100%;
-  padding: rem(22);
+  padding-top: 0;
+  padding-right: rem(22);
+  padding-bottom: rem(80);
+  padding-left: rem(22);
 }
 
 .drawer-menu__items {
@@ -63,9 +62,8 @@ html {
 }
 
 .drawer-menu__link {
-  // display: block;
   text-align: left;
-  padding: rem(21) 0;
+  padding: rem(18) 0;
   font-family: $base-font-family;
   font-size: rem(20);
   font-weight: $bold;
@@ -98,4 +96,8 @@ html {
 .drawer-menu__button {
   max-width: rem(400);
   width: 100%;
+}
+
+.drawer-menu__button.button--submit {
+  padding: rem(16);
 }

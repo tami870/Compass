@@ -2,12 +2,12 @@
 
 .contact-form {
   background-color: $form-blue;
-  padding-top: rem(46);
+  padding-top: rem(42);
   padding-bottom: rem(155);
 
   @include mq(md) {
     padding-top: rem(44);
-    padding-bottom: rem(90);
+    padding-bottom: rem(88);
   }
 }
 

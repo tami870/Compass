@@ -9,8 +9,8 @@
   background-size: cover;
 
   @include mq(md) {
-    padding-top: rem(48);
-    padding-bottom: rem(65);
+    padding-top: rem(27);
+    padding-bottom: rem(46);
   }
 }
 
@@ -23,11 +23,13 @@
 .management-services__logo {
   max-width: rem(368);
   width: 100%;
-  margin: 0 auto;
+  margin-top: rem(13);
+  margin-right: auto;
+  margin-left: auto;
 
   @include mq(md) {
     max-width: rem(363);
-    margin-top: rem(36);
+    margin-top: rem(32);
   }
 }
 
@@ -48,6 +50,7 @@
   font-size: rem(20);
   font-weight: $regular;
   color: $text-black;
+  line-height: 1.2;
 
   @include mq(md) {
     font-size: rem(21);
@@ -55,11 +58,13 @@
 }
 
 .management-services__stats {
-  margin-top: rem(17);
+  padding-bottom: rem(25);
+  padding-top: rem(23);
+  padding-right: rem(29);
+  padding-left: rem(48);
+  margin-top: rem(27);
   display: flex;
-  justify-content: center;
-  padding: rem(25);
-  gap: rem(51);
+  gap: rem(74);
   border: 2px solid $form-blue;
   border-radius: rem(20);
   background-color: $white;
@@ -69,6 +74,8 @@
   text-align: center;
 
   @include mq(md) {
+    margin-top: rem(40);
+    padding: rem(28);
     gap: 0;
   }
 }
@@ -77,11 +84,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @include mq(md) {
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 .management-stats:not(:first-child) {
   @include mq(md) {
-    margin-top: rem(32);
+    margin-top: rem(30);
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -92,6 +107,8 @@
 
   @include mq(md) {
     font-size: rem(26);
+    // margin-top: rem(32);
+    // margin-left: rem(-29);
   }
 }
 
@@ -108,6 +125,7 @@
 
   @include mq(md) {
     font-size: rem(72);
+    line-height: 1;
   }
 }
 

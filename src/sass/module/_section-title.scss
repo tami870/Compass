@@ -5,7 +5,7 @@
   flex-direction: column;
   width: 100%;
   text-align: center;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .section-title__en::first-letter {
@@ -46,4 +46,9 @@
 
 .section-title--white {
   color: $white;
+}
+
+.section-title__jp.section-title--medium {
+  font-size: rem(32);
+  line-height: 1.6;
 }

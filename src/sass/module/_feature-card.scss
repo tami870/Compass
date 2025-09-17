@@ -5,26 +5,31 @@
   height: rem(350);
 
   @include mq(md) {
-    height: rem(494);
+    height: auto;
+    display: grid;
+    place-items: center;
+    margin-top: rem(75);
+    padding-bottom: 37%;
   }
 }
 
-.feature-card--reverse {
+.feature__card:nth-of-type(2) {
+  margin-top: rem(80);
+
   @include mq(md) {
-    margin-top: rem(-108);
+    margin-top: rem(75);
   }
 }
 
 .feature-card:nth-child(3) {
+  margin-top: rem(60);
+
   @include mq(md) {
-    position: absolute;
-    width: 100%;
-    top: 116.3%;
-    left: auto;
-    right: 0;
+    margin-top: rem(75);
   }
 }
 
+//SP版は非表示
 .feature-card__background {
   position: absolute;
   top: 0;
@@ -33,13 +38,14 @@
   max-width: rem(750);
 
   @include mq(md) {
+    position: static;
     display: none;
   }
 }
 
 .feature-card--reverse .feature-card__background {
-  top: 5%;
-  left: -1.2%;
+  top: 8%;
+  left: 2.7%;
   right: auto;
 }
 
@@ -59,31 +65,16 @@
   width: 100%;
 
   @include mq(md) {
-    max-width: rem(494);
-    top: 44%;
-    left: auto;
-    right: 0;
+    position: static;
+    max-width: clamp(rem(356), 98.8vw, rem(494));
+    grid-area: 1 / 1;
+    z-index: 1;
   }
 }
 
 .feature-card--reverse .feature-card__image {
-  position: absolute;
   left: auto;
-  right: 1.6%;
-
-  @include mq(md) {
-    top: 64%;
-    left: 0;
-    right: auto;
-  }
-}
-
-.feature-card:nth-child(3) .feature-card__image {
-  @include mq(md) {
-    position: absolute;
-    top: 36%;
-    right: 1%;
-  }
+  right: -1.5%;
 }
 
 .feature-card__image img {
@@ -102,6 +93,8 @@
   right: 5.4%;
   background-color: $white;
   max-width: rem(470);
+  width: 100%;
+  z-index: 2;
   padding-top: rem(34);
   padding-right: rem(56);
   padding-bottom: rem(36);
@@ -109,36 +102,28 @@
   z-index: 30;
 
   @include mq(md) {
-    top: 0;
-    right: auto;
-    left: 4%;
-    max-width: rem(447);
-    height: rem(263);
-    padding: rem(27) rem(32);
+    position: static;
+    max-width: clamp(rem(322), 89.4vw, rem(447));
+    height: clamp(rem(189), 52.6vw, rem(263));
+    padding: clamp(rem(19), 5.4vw, rem(27)) clamp(rem(23), 6.4vw, rem(32));
+    margin-left: auto;
+    margin-right: auto;
+    grid-area: 1 / 1;
+    margin-top: -80%;
   }
 }
 
 .feature-card--reverse .feature-card__body {
-  top: 22%;
   right: auto;
-  left: 2.4%;
+  left: 5.4%;
+  max-width: rem(551);
+  width: 100%;
+  padding: rem(45);
 
   @include mq(md) {
-    right: auto;
-    left: 4.4%;
+    max-width: rem(447);
+    padding: clamp(rem(19), 5.4vw, rem(27)) clamp(rem(23), 6.4vw, rem(32));
   }
-}
-
-.feature-card:nth-child(3) .feature-card__body {
-  padding: rem(26) rem(46) rem(26);
-  line-height: 1;
-  height: rem(223);
-  font-size: rem(24);
-}
-
-.feature-card--wide {
-  max-width: rem(551);
-  padding: rem(35) rem(50.5);
 }
 
 .feature-card__title,
@@ -146,13 +131,15 @@
   font-size: rem(30);
   font-weight: bold;
   color: $form-blue;
+  text-align: left;
 
   @include mq(md) {
-    font-size: rem(32);
+    font-size: clamp(rem(23), 6.4vw, rem(32));
   }
 }
 
 .feature-card__text {
+  text-align: left;
   margin-top: rem(24);
   font-size: rem(16);
   font-weight: $regular;
@@ -160,8 +147,8 @@
   line-height: 1.875;
 
   @include mq(md) {
-    font-size: rem(21);
+    font-size: clamp(rem(15), 4.2vw, rem(21));
     line-height: 1.88;
-    margin-top: rem(20);
+    margin-top: clamp(rem(14), 4vw, rem(20));
   }
 }

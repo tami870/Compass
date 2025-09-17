@@ -11,6 +11,8 @@
   @include mq(md) {
     padding-top: rem(27);
     padding-bottom: rem(46);
+    background-image: url(../images/common/background01.svg);
+    background-position: center top;
   }
 }
 
@@ -53,7 +55,7 @@
   line-height: 1.2;
 
   @include mq(md) {
-    font-size: rem(21);
+    font-size: clamp(rem(15), 4.2vw, rem(21));
   }
 }
 
@@ -74,70 +76,10 @@
   text-align: center;
 
   @include mq(md) {
-    margin-top: rem(40);
-    padding: rem(28);
+    margin-top: clamp(rem(29), 8vw, rem(40));
+    padding: clamp(rem(20), 5.6vw, rem(28));
     gap: 0;
+    max-width: rem(550);
+    width: 100%;
   }
-}
-
-.management-stats {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @include mq(md) {
-    margin: 0 auto;
-    text-align: center;
-  }
-}
-
-.management-stats:not(:first-child) {
-  @include mq(md) {
-    margin-top: rem(30);
-    margin-bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-.management-stats__title {
-  color: $text-blue;
-  font-size: rem(24);
-  font-weight: $bold;
-
-  @include mq(md) {
-    font-size: rem(26);
-    // margin-top: rem(32);
-    // margin-left: rem(-29);
-  }
-}
-
-.management-stats__value {
-  font-size: rem(28);
-}
-
-.management-stats__number {
-  color: $color-accent;
-  font-size: rem(70);
-  font-weight: bold;
-  letter-spacing: 0.06em;
-  font-family: $numbers-font-family;
-
-  @include mq(md) {
-    font-size: rem(72);
-    line-height: 1;
-  }
-}
-
-.management-stats__unit {
-  font-weight: bold;
-  font-size: rem(48);
-
-  @include mq(md) {
-    font-size: rem(42);
-  }
-}
-
-.management-stats--unit-space {
-  margin-left: 0.25em;
 }

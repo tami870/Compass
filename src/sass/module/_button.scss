@@ -1,23 +1,18 @@
 @use "global" as *;
 
 ////////////////////////////////////////////
-// ボタン共通
+// ボタン共通設定
 ////////////////////////////////////////////
 .button {
-  position: relative;
   display: inline-block;
-  background-color: $button-base;
+  background-color: $color-accent; //初期は橙色
   font-family: $base-font-family;
   color: $white;
-  font-size: rem(16);
-  font-weight: $regular;
-  letter-spacing: 0.1em;
   text-align: center;
-  padding: rem(16);
+  font-size: rem(16); //初期値
+  font-weight: $regular; //初期値
+  padding: rem(16); //初期値
   border-radius: rem(60);
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  z-index: 10;
   cursor: pointer;
   width: 100%;
 }
@@ -29,58 +24,129 @@
   transition: background-color 0.3s;
 }
 
-// 前面をオレンジ色に
-.button::before {
-  content: "";
-  position: absolute;
-  top: -10%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: $color-accent;
-  border-radius: rem(60);
-  z-index: 20;
-  transition: top 0.1s ease-in-out;
-}
-
 // テキストを前面に出す
 .button__text {
   position: relative;
   z-index: 30;
 }
 
-// 電話のマーク
+// メールのマーク
 .button__icon {
   position: relative;
-  display: inline-block;
-  width: rem(18); // ← 画像サイズに合わせる
-  height: rem(13); // ← 画像サイズに合わせる
-  vertical-align: middle;
-  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(18);
+  z-index: 90;
 }
 
 ////////////////////////////////////////////
 // 大きさ違い
 ////////////////////////////////////////////
-//heroで使用
+
+// 今後追加する用に
 .button--large {
-  padding: rem(24.5) rem(24.5);
-  font-weight: $bold;
+  padding-top: rem(24.5);
+  padding-bottom: rem(24.5);
   font-size: rem(30);
+  font-weight: $bold;
 }
 
-// 中断Contactで使用
+// 中段Contactで使用
 .button--medium {
-  padding: rem(20.5) rem(20.5);
+  padding-top: rem(17.5);
+  padding-bottom: rem(17.5);
   font-size: rem(24);
   font-weight: $bold;
+  letter-spacing: 0.1em;
+
+  @include mq(md) {
+    padding-top: clamp(rem(15), 4.1vw, rem(21));
+    padding-bottom: clamp(rem(15), 4.1vw, rem(21));
+    font-size: clamp(rem(17), 4.8vw, rem(24));
+  }
 }
 
 // headerで使用
 .button--small {
-  padding: rem(12) rem(12);
+  padding-top: rem(12.5);
+  padding-bottom: rem(12.5);
+  font-size: rem(16);
   font-weight: $medium;
-  letter-spacing: 0;
+}
+
+////////////////////////////////////////////
+// 影（土台）あり
+////////////////////////////////////////////
+.button--three-dimensional {
+  box-shadow: 0 6px 0 0 rgba(160, 83, 24, 1);
+}
+
+////////////////////////////////////////////
+// hero-cta用ボタン
+////////////////////////////////////////////
+.button__cta {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: rem(30);
+  font-weight: $bold;
+  padding-top: rem(23);
+  padding-bottom: rem(26);
+  box-shadow: 0 4px 0 0 rgba(160, 83, 24, 1);
+  z-index: 10;
+  width: clamp(rem(288), 80vw, rem(400));
+  line-height: 1;
+
+  @include mq(md) {
+    font-size: clamp(rem(16), 4.4vw, rem(22));
+    padding-top: rem(14);
+    padding-bottom: rem(14);
+  }
+}
+
+// "＞"の作成
+.button__cta::after {
+  content: "";
+  position: absolute;
+  right: 10%;
+  top: 51%;
+  width: clamp(rem(20), 5.6vw, rem(28));
+  height: clamp(rem(20), 5.6vw, rem(28));
+  transform: translateY(-50%);
+  z-index: 2;
+  background: linear-gradient(
+      28deg,
+      transparent calc(50% - 1px),
+      currentColor calc(50% - 1px) calc(50% + 1px),
+      transparent calc(50% + 1px)
+    ),
+    linear-gradient(
+      -28deg,
+      transparent calc(50% - 1px),
+      currentColor calc(50% - 1px) calc(50% + 1px),
+      transparent calc(50% + 1px)
+    );
+  // 右半分だけ残して「＞」の形にする
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+
+  @include mq(md) {
+    top: 50%;
+    right: 6%;
+  }
+}
+
+.button__cta-text {
+}
+
+.button__cta-text--strong {
+  font-size: rem(35);
+  font-weight: $bold;
+
+  @include mq(md) {
+    font-size: clamp(rem(19), 5.2vw, rem(26));
+  }
 }
 
 ////////////////////////////////////////////
@@ -98,13 +164,19 @@
   border-radius: rem(60);
   background-color: $color-accent;
   cursor: pointer;
+
+  @include mq(md) {
+    padding: clamp(rem(17), 4.8vw, rem(24));
+    font-size: clamp(rem(13), 4.07vw, rem(20));
+  }
 }
 
 ////////////////////////////////////////////
 // 「修正する」ボタン
 ////////////////////////////////////////////
 .button--back {
-  background-color: $text-blue;
+  background-color: $form-blue;
+  box-shadow: 0 6px 0 0 rgba(0, 140, 179, 1);
 }
 
 .button--back::before {
@@ -112,5 +184,7 @@
 }
 
 .button--back:active::before {
-  top: 0;
+  background-color: transparent;
+  box-shadow: none;
+  transition: background-color 0.3s;
 }

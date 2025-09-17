@@ -69,7 +69,6 @@ html {
   font-weight: $bold;
   color: #333;
   border-bottom: 1px solid #ddd;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -100,4 +99,6 @@ html {
 
 .drawer-menu__button.button--submit {
   padding: rem(16);
+  font-size: rem(18);
+  letter-spacing: 0.04em;
 }

@@ -1,26 +1,26 @@
 @use "global" as *;
 
 .feature {
+  position: relative;
   padding-top: rem(76);
   padding-bottom: rem(106);
   background-color: $background-blue;
   height: rem(1519);
-  position: relative;
 
   @include mq(md) {
-    padding-top: rem(13);
+    padding-top: rem(15);
     padding-bottom: rem(56);
-    height: rem(1736);
+    height: clamp(rem(1250), 347.2vw, rem(1736));
   }
 }
 
 .feature__background {
   display: none;
   position: absolute;
-  top: 15%;
+  bottom: 0;
   right: 0;
-  width: 35%;
-  height: 82%;
+  width: 65%;
+  height: clamp(rem(915), 286vw, rem(1430));
   background-image: url("../images/common/feature-common-image_sp.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -41,7 +41,6 @@
 .feature__cards {
   display: flex;
   flex-direction: column;
-  gap: rem(64);
   margin-top: rem(56);
   margin-right: auto;
   margin-left: auto;
@@ -50,15 +49,14 @@
   z-index: 10;
 
   @include mq(md) {
-    margin-top: rem(53);
-    gap: rem(52);
-    width: auto;
+    margin-top: rem(170);
+    max-width: rem(493);
+    width: 100%;
   }
 }
 
 .feature__card {
   display: flex;
   flex-direction: column;
-  gap: rem(52);
   position: relative;
 }

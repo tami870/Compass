@@ -94,7 +94,7 @@
   max-width: 100%;
 
   @include mq(md) {
-    padding-right: rem(23);
+    padding-right: clamp(rem(17), 4.6vw, rem(23));
     position: static;
   }
 }
@@ -141,7 +141,7 @@
 }
 
 .problem__text {
-  font-size: rem(24);
+  font-size: clamp(rem(17), 4.8vw, rem(24));
   color: $text-black;
   font-weight: $regular;
   white-space: nowrap;
@@ -161,9 +161,9 @@
   margin-top: rem(40);
 
   @include mq(md) {
-    margin-top: rem(30);
-    padding-top: rem(48);
-    padding-bottom: rem(42);
+    margin-top: clamp(rem(22), 6vw, rem(30));
+    padding-top: clamp(rem(35), 9.6vw, rem(48));
+    padding-bottom: clamp(rem(30), 8.4vw, rem(42));
   }
 }
 
@@ -173,7 +173,7 @@
   color: $white;
 
   @include mq(md) {
-    font-size: rem(24);
+    font-size: clamp(rem(17), 4.8vw, rem(24));
   }
 }
 

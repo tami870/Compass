@@ -82,50 +82,41 @@ jQuery(function ($) {
   // 6) バリデーション
   // ===============================
 
-  // 送信時に未入力を目立たせる
-  document
-    .querySelector(".contact__form")
-    .addEventListener("submit", function (e) {
-      const invalidEl = this.querySelector(":invalid");
-      if (invalidEl) {
-        e.preventDefault();
-        invalidEl.focus();
-        invalidEl.scrollIntoView({ behavior: "smooth", block: "center" });
-      }
-    });
+  // ===============================
+  // バリデーション
+  // ===============================
 
-  // フィールドを触ったら data-touched を付ける
-  document
-    .querySelectorAll(".form__input-text, .form__select")
-    .forEach((el) => {
-      el.addEventListener("blur", () => {
-        el.setAttribute("data-touched", "true");
-      });
-    });
+  const form = document.querySelector(".contact-form__form-area");
 
-  const form = document.querySelector(".contact__form");
+  if (!form) return;
+
   const requiredFields = form.querySelectorAll(
-    ".form__input-text[required], .form__select[required]"
+    "input[required], textarea[required], select[required]"
   );
-  const submitButton = form.querySelector(".form__button");
+  const submitButton = form.querySelector('button[type="submit"]');
 
-  // バリデーションチェック関数
-  const checkFormValidity = () => {
-    const allValid = Array.from(requiredFields).every((el) => {
-      return el.dataset.touched && el.checkValidity();
-    });
-    submitButton.disabled = !allValid;
-  };
-
-  // 各フィールドに blur イベント追加
-  requiredFields.forEach((el) => {
-    el.addEventListener("blur", checkFormValidity);
-    el.addEventListener("input", checkFormValidity); // 入力途中でも反応させる
+  // 送信時に未入力を目立たせる
+  form.addEventListener("submit", function (e) {
+    const invalidEl = form.querySelector(":invalid");
+    if (invalidEl) {
+      e.preventDefault();
+      invalidEl.focus();
+      invalidEl.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
   });
 
-  // メールアドレスの形式バリデーションを強化
-  const emailInput = form.querySelector('input[type="email"]');
+  // フィールドに data-touched 属性をつける
+  form.querySelectorAll("input, textarea, select").forEach((el) => {
+    el.addEventListener("blur", () => {
+      el.setAttribute("data-touched", "true");
+      checkFormValidity(); // 状態を即時更新
+    });
 
+    el.addEventListener("input", checkFormValidity);
+  });
+
+  // メールアドレス形式チェック（強化）
+  const emailInput = form.querySelector('input[type="email"]');
   emailInput.addEventListener("blur", function () {
     const email = emailInput.value.trim();
     const emailFormat = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -138,7 +129,17 @@ jQuery(function ($) {
       emailInput.setCustomValidity("");
     }
 
-    // エラーメッセージ表示のために再バリデーション
     checkFormValidity();
   });
+
+  // フォーム全体のバリデーション状態をチェック
+  function checkFormValidity() {
+    const allValid = Array.from(requiredFields).every((el) => {
+      return el.dataset.touched && el.checkValidity();
+    });
+
+    if (submitButton) {
+      submitButton.disabled = !allValid;
+    }
+  }
 });

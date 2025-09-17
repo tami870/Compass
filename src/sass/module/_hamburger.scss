@@ -3,7 +3,7 @@
 .hamburger {
   position: fixed;
   z-index: 1000;
-  top: rem(20);
+  top: rem(27);
   right: rem(20);
   width: rem(32);
   height: rem(24);
@@ -12,7 +12,7 @@
 
 .hamburger.is-active {
   top: rem(40);
-  right: rem(15);
+  right: rem(20);
 }
 
 .hamburger span {

@@ -1,0 +1,62 @@
+@use "global" as *;
+
+.management-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mq(md) {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.management-stats:not(:first-child) {
+  @include mq(md) {
+    margin-top: rem(30);
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.management-stats__title {
+  color: $text-blue;
+  font-size: rem(24);
+  font-weight: $bold;
+
+  @include mq(md) {
+    font-size: clamp(rem(19), 5.2vw, rem(26));
+  }
+}
+
+.management-stats__value {
+  font-size: clamp(rem(20), 5.6vw, rem(28));
+  font-weight: $bold;
+}
+
+.management-stats__number {
+  color: $color-accent;
+  font-size: rem(70);
+  font-weight: bold;
+  letter-spacing: 0.06em;
+  font-family: $numbers-font-family;
+
+  @include mq(md) {
+    font-size: clamp(rem(46), 14.4vw, rem(72));
+    line-height: 1;
+  }
+}
+
+.management-stats__unit {
+  font-weight: bold;
+  font-size: rem(48);
+
+  @include mq(md) {
+    font-size: rem(42);
+  }
+}
+
+.management-stats--unit-space {
+  margin-left: 0.25em;
+}

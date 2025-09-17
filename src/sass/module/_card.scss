@@ -1,8 +1,8 @@
 @use "global" as *;
 
-/* ================
-   Base card
-================ */
+///////////////////////////////////////////
+/// 基本型
+///////////////////////////////////////////
 .card {
   background-color: $white;
   border-radius: rem(8);
@@ -49,9 +49,9 @@
   display: inline-block;
 }
 
-/* ================
-   Modifiers
-================ */
+///////////////////////////////////////////
+/// モディファイア
+///////////////////////////////////////////
 
 /* Expectation */
 .card--expectation {
@@ -64,7 +64,7 @@
   width: rem(260);
 
   @include mq(md) {
-    width: rem(339);
+    width: clamp(rem(244), 67.8vw, rem(339));
     margin-top: rem(7);
   }
 }
@@ -73,7 +73,7 @@
   margin-top: rem(22);
 
   @include mq(md) {
-    margin-top: rem(25);
+    margin-top: clamp(rem(18), 5vw, rem(25));
   }
 }
 
@@ -86,7 +86,7 @@
   line-height: 1.3;
 
   @include mq(md) {
-    font-size: rem(32);
+    font-size: clamp(rem(23), 6.4vw, rem(32));
   }
 }
 
@@ -98,13 +98,14 @@
   margin-top: rem(16);
   line-height: 1.2;
   max-width: rem(260);
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 
   @include mq(md) {
     margin-top: rem(15);
-    font-size: rem(24);
-    max-width: rem(328);
+    font-size: clamp(rem(17), 4.8vw, rem(24));
+    max-width: clamp(rem(236), 65.6vw, rem(328));
   }
 }
 
@@ -143,7 +144,7 @@
   padding: rem(42) 0;
 
   @include mq(md) {
-    padding: rem(31) 0;
+    padding: clamp(rem(22), 6.2vw, rem(31)) 0;
   }
 }
 
@@ -151,7 +152,7 @@
   width: rem(397);
 
   @include mq(md) {
-    width: rem(370);
+    width: clamp(rem(266), 74vw, rem(370));
   }
 }
 
@@ -167,7 +168,7 @@
   text-align: center;
 
   @include mq(md) {
-    font-size: rem(26);
+    font-size: clamp(rem(19), 5.2vw, rem(26));
   }
 }
 
@@ -178,11 +179,12 @@
   letter-spacing: 0.1em;
   line-height: 1.8;
   max-width: rem(353);
+  width: 100%;
   margin-top: rem(14);
   margin-left: auto;
   margin-right: auto;
 
   @include mq(md) {
-    max-width: rem(329);
+    max-width: clamp(rem(237), 65.8vw, rem(329));
   }
 }

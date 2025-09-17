@@ -15,6 +15,10 @@
 
 .hero__inner {
   height: inherit;
+  max-width: rem(1380);
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .hero__content {
@@ -22,9 +26,9 @@
   height: inherit;
 }
 
-///////////////////////////////////////////
-/// 家型のキャッチコピー
-///////////////////////////////////////////
+/* ================================
+  家型のキャッチコピー
+================================ */
 .hero__catch {
   background-color: rgba(255, 255, 255, 0.5);
   padding-top: rem(76);
@@ -41,13 +45,13 @@
   z-index: 10;
 
   @include mq(md) {
-    padding-top: rem(32);
-    padding-right: rem(10);
-    padding-bottom: rem(20);
-    padding-left: rem(10);
+    padding-top: clamp(rem(23), 6.4vw, rem(32));
+    padding-right: clamp(rem(7), 2vw, rem(10));
+    padding-bottom: clamp(rem(14), 4vw, rem(20));
+    padding-left: clamp(rem(7), 2vw, rem(10));
     max-width: rem(460);
-    top: 5%;
-    left: 4.1%;
+    top: clamp(8%, 5%, 4%);
+    left: clamp(6%, 4.1%, 4.1%);
   }
 }
 
@@ -61,13 +65,14 @@
   line-height: 1.4;
 
   @include mq(md) {
-    font-size: rem(15);
+    font-size: clamp(rem(11), 3vw, rem(15));
+    padding-top: clamp(rem(10), 2.8vw, rem(14));
+    padding-left: clamp(rem(7), 2vw, rem(10));
     line-height: 1.3;
-    padding-top: rem(14);
-    padding-left: rem(10);
   }
 }
 
+// 斜め線
 .hero__catch-sub::after {
   content: "";
   position: absolute;
@@ -79,9 +84,9 @@
   transform: rotate(135deg);
 
   @include mq(md) {
-    width: rem(33);
-    top: 120%;
-    left: 57.6%;
+    width: rem(32);
+    top: 122.5%;
+    left: 53%;
   }
 }
 
@@ -92,7 +97,7 @@
   color: $form-blue;
 
   @include mq(md) {
-    font-size: rem(24);
+    font-size: clamp(rem(17), 4.8vw, rem(24));
     font-weight: $medium;
   }
 }
@@ -105,11 +110,12 @@
   letter-spacing: 0.06em;
 
   @include mq(md) {
-    font-size: rem(36);
+    font-size: clamp(rem(26), 7.2vw, rem(36));
   }
 }
 
 .hero__catch-main {
+  display: block;
   margin-top: rem(18);
   font-size: rem(50);
   font-weight: $bold;
@@ -117,8 +123,8 @@
   color: $text-black;
 
   @include mq(md) {
-    margin-top: rem(20);
-    font-size: rem(32);
+    margin-top: clamp(rem(14), 4vw, rem(20));
+    font-size: clamp(rem(23), 6.4vw, rem(32));
   }
 }
 
@@ -131,13 +137,13 @@
   letter-spacing: -0.05em;
 
   @include mq(md) {
-    font-size: rem(46);
+    font-size: clamp(rem(33), 9.2vw, rem(46));
   }
 }
 
 .hero__catch-br {
   @include mq(md) {
-    padding-left: rem(70);
+    padding-left: clamp(rem(50), 14vw, rem(70));
   }
 }
 
@@ -149,14 +155,16 @@
   color: $text-black;
 
   @include mq(md) {
-    font-size: rem(66);
+    font-size: clamp(rem(48), 13.2vw, rem(66));
     padding-left: rem(7);
   }
 }
 
-///////////////////////////////////////////
-/// モデル画像
-///////////////////////////////////////////
+/* ================================
+   家型のキャッチコピー
+================================ */ /* ================================
+  モデル画像
+================================ */
 .hero__image {
   max-width: rem(628);
   width: 100%;
@@ -165,6 +173,12 @@
   z-index: 20;
   top: 14%;
   right: 1%;
+
+  @include mq(lg) {
+    max-width: rem(500);
+    top: 31.4%;
+    right: 0;
+  }
 
   @include mq(md) {
     max-width: rem(333);
@@ -178,15 +192,20 @@
   height: auto;
 }
 
-///////////////////////////////////////////
-/// バッジ(デスクトップ版のみ)
-///////////////////////////////////////////
+/* ================================
+  バッジ（デスクトップ版のみ）
+================================ */
 .hero__badges {
   display: flex;
   position: absolute;
   z-index: 30;
   bottom: 7%;
   right: 11%;
+
+  @include mq(lg) {
+    bottom: 2%;
+    right: 5%;
+  }
 
   @include mq(md) {
     display: none;
@@ -199,9 +218,9 @@
   height: auto;
 }
 
-///////////////////////////////////////////
-/// ヒーロー用ボタン
-///////////////////////////////////////////
+/* ================================
+  ヒーロー用ボタン
+================================ */
 .hero__cta {
   display: flex;
   align-items: center;
@@ -229,8 +248,8 @@
   z-index: 20;
 
   @include mq(md) {
-    width: rem(80);
-    padding: rem(11) rem(11);
+    width: clamp(rem(58), 16vw, rem(80));
+    padding: clamp(rem(8), 2.2vw, rem(11));
   }
 }
 
@@ -239,7 +258,7 @@
   font-weight: $bold;
 
   @include mq(md) {
-    font-size: rem(22);
+    font-size: clamp(rem(16), 4.4vw, rem(22));
   }
 }
 
@@ -250,7 +269,7 @@
   font-weight: $bold;
 
   @include mq(md) {
-    font-size: rem(33);
+    font-size: clamp(rem(24), 6.6vw, rem(33));
   }
 }
 
@@ -263,7 +282,7 @@
   z-index: 10;
 
   @include mq(md) {
-    width: rem(300);
+    width: clamp(rem(213), 59.2vw, rem(296));
     top: 0;
     left: -14%;
   }

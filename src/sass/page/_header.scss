@@ -21,18 +21,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  @include mq(md) {
-    justify-content: space-between;
-  }
-}
-
-.header__title {
   height: rem(84);
 
   @include mq(md) {
     height: rem(79);
   }
+}
+
+.header__title {
 }
 
 .header__logo {
@@ -41,7 +37,7 @@
   height: auto;
 
   @include mq(md) {
-    width: rem(258);
+    width: clamp(rem(186), 51.6vw, rem(258));
   }
 }
 
@@ -69,9 +65,7 @@
   padding-left: rem(20);
 
   @include mq(md) {
-    padding-top: rem(10);
-    padding-bottom: rem(14);
-    padding-left: rem(16);
+    padding: 0 rem(10);
   }
 }
 

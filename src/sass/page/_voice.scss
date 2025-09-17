@@ -29,12 +29,12 @@
 
   @include mq(md) {
     grid-template-columns: 1fr;
-    gap: rem(58);
+    gap: clamp(rem(42), 11.6vw, rem(58));
   }
 }
 
 .voice__card {
-  max-width: rem(483);
+  max-width: clamp(rem(348), 96.6vw, rem(483));
   width: 100%;
   margin: 0 auto;
 }

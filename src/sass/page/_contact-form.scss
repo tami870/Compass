@@ -22,7 +22,7 @@
   padding-bottom: rem(80);
 
   @include mq(md) {
-    padding-top: rem(52);
-    padding-bottom: rem(55);
+    padding-top: clamp(rem(37), 10.4vw, rem(52));
+    padding-bottom: clamp(rem(40), 11vw, rem(55));
   }
 }

@@ -20,15 +20,16 @@
   display: block;
 
   @include mq(md) {
-    font-size: rem(26);
+    font-size: clamp(rem(19), 5.2vw, rem(26));
   }
 }
 
 .section-title__jp strong {
+  font-weight: $bold;
   font-size: rem(60);
 
   @include mq(md) {
-    font-size: rem(40);
+    font-size: clamp(rem(29), 8vw, rem(40));
   }
 }
 
@@ -36,11 +37,11 @@
   color: $text-black2;
   font-size: rem(25);
   font-weight: $regular;
-  font-family: $second-font-family;
+  font-family: $base-font-family;
   display: block;
 
   @include mq(md) {
-    font-size: rem(21);
+    font-size: clamp(rem(15), 4.2vw, rem(21));
   }
 }
 
@@ -49,6 +50,8 @@
 }
 
 .section-title__jp.section-title--medium {
-  font-size: rem(32);
-  line-height: 1.6;
+  @include mq(md) {
+    font-size: clamp(rem(23), 6.4vw, rem(32));
+    line-height: 1.6;
+  }
 }

@@ -95,7 +95,7 @@
   letter-spacing: 0;
 
   @include mq(md) {
-    font-size: rem(22);
+    font-size: clamp(rem(16), 4.4vw, rem(22));
   }
 }
 
@@ -104,6 +104,6 @@
   font-weight: $bold;
 
   @include mq(md) {
-    font-size: rem(26);
+    font-size: clamp(rem(19), 5.2vw, rem(26));
   }
 }

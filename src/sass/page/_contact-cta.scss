@@ -23,11 +23,13 @@
   border-radius: rem(20);
   padding: rem(25);
   max-width: rem(1000);
+  width: 100%;
   margin: 0 auto;
 
   @include mq(md) {
     padding-top: rem(34);
     padding-bottom: rem(45);
+    max-width: rem(600);
   }
 }
 
@@ -63,7 +65,7 @@
   line-height: 1;
 
   @include mq(md) {
-    font-size: rem(26);
+    font-size: clamp(rem(29), 8vw, rem(40));
     margin-top: rem(10);
     margin-left: rem(4);
   }
@@ -83,7 +85,9 @@
 .contact-cta__tel-icon {
   width: rem(25);
   height: rem(25);
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
   @include mq(md) {
     width: rem(33);
@@ -95,7 +99,7 @@
   font-size: rem(30);
 
   @include mq(md) {
-    font-size: rem(40);
+    font-size: clamp(rem(29), 8vw, rem(40));
     font-weight: $bold;
     color: $color-accent;
   }
@@ -105,12 +109,12 @@
   color: $text-black;
   font-size: rem(14);
   font-weight: $bold;
+  margin-top: rem(2);
   margin-left: rem(-10);
 
   @include mq(md) {
-    font-size: rem(18);
+    font-size: clamp(rem(13), 3.6vw, rem(18));
     margin-left: 0;
-    line-height: 1.5;
   }
 }
 
@@ -120,10 +124,6 @@
   text-align: center;
 
   @include mq(md) {
-    max-width: rem(342);
+    width: clamp(rem(246), 68.4vw, rem(342));
   }
-}
-
-.contact-cta__button .button {
-  width: 100%;
 }

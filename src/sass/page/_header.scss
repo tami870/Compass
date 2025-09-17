@@ -9,10 +9,6 @@
   width: 100%;
   height: var(--header-height);
   background-color: $white;
-
-  @include mq(md) {
-    height: rem(79);
-  }
 }
 
 .header__inner {
@@ -22,9 +18,12 @@
   align-items: center;
   justify-content: space-between;
   height: rem(84);
+  padding-right: rem(15);
+  padding-left: rem(15);
 
   @include mq(md) {
     height: rem(79);
+    padding: 0;
   }
 }
 

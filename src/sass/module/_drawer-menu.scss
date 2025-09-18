@@ -2,7 +2,7 @@
 
 /* セクションリンクのクリック時のスクロール位置調整 */
 :root {
-  --header-height: rem(80);
+  --header-height: rem(84);
 }
 [id] {
   scroll-margin-top: var(--header-height);
@@ -98,7 +98,7 @@ html {
 }
 
 .drawer-menu__button.button--submit {
-  padding: rem(16);
+  padding: rem(13.5);
   font-size: rem(18);
   letter-spacing: 0.04em;
 }

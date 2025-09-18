@@ -17,11 +17,14 @@
   width: 100%;
 }
 
-// 押すと凹む
+.button:hover {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+// 押すと影が消える（凹むように見える）
 .button:active {
-  background-color: transparent;
   box-shadow: none;
-  transition: background-color 0.3s;
 }
 
 // テキストを前面に出す
@@ -36,7 +39,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: rem(18);
+  min-width: rem(16);
   z-index: 90;
 }
 
@@ -79,6 +82,10 @@
 // 影（土台）あり
 ////////////////////////////////////////////
 .button--three-dimensional {
+  box-shadow: 0 4px 0 0 rgba(160, 83, 24, 1);
+}
+
+.button--three-dimensional-large {
   box-shadow: 0 6px 0 0 rgba(160, 83, 24, 1);
 }
 
@@ -149,6 +156,12 @@
   }
 }
 
+.button.button__cta:hover {
+  opacity: 1;
+  background-color: $color-accent-hover;
+  transition: background-color 0.3s ease;
+}
+
 ////////////////////////////////////////////
 // contact-form用ボタン
 ////////////////////////////////////////////
@@ -160,12 +173,13 @@
   font-weight: $regular;
   color: $white;
   text-align: center;
-  padding: rem(24);
+  padding: rem(13.5);
   border-radius: rem(60);
   background-color: $color-accent;
   cursor: pointer;
 
   @include mq(md) {
+    line-height: 1.2;
     padding: clamp(rem(17), 4.8vw, rem(24));
     font-size: clamp(rem(13), 4.07vw, rem(20));
   }

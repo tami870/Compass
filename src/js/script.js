@@ -82,10 +82,6 @@ jQuery(function ($) {
   // 6) バリデーション
   // ===============================
 
-  // ===============================
-  // バリデーション
-  // ===============================
-
   const form = document.querySelector(".contact-form__form-area");
 
   if (!form) return;

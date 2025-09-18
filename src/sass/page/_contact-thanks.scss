@@ -1,8 +1,19 @@
 @use "global" as *;
 
 .contact-thanks {
-  margin-top: rem(100);
+  padding-top: rem(100);
+  padding-bottom: rem(100);
   font-family: $base-font-family;
+  background-image: url(../images/common/feature-common-image_pc.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+
+  @include mq(md) {
+    padding-top: rem(60);
+    padding-bottom: rem(60);
+    background-image: url(../images/common/feature-common-image_sp.webp);
+  }
 }
 
 .contact-thanks__title {

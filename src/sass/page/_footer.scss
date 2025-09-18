@@ -13,6 +13,11 @@
   }
 }
 
+.footer--subpage {
+  padding-top: rem(32);
+  padding-bottom: rem(32);
+}
+
 .footer__inner {
   max-width: $inner + strip-unit($padding-pc) * 2;
   padding-right: rem(15);

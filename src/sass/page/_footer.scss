@@ -95,8 +95,10 @@
 .footer__nav-link {
 }
 
-.footer__nav-link:hover {
-  text-decoration: underline;
+@media (hover: hover) and (pointer: fine) {
+  .footer__nav-link:hover {
+    text-decoration: underline;
+  }
 }
 
 .footer__bottom {
@@ -118,8 +120,10 @@
 .footer__policy-link {
 }
 
-.footer__policy-link:hover {
-  text-decoration: underline;
+@media (hover: hover) and (pointer: fine) {
+  .footer__policy-link:hover {
+    text-decoration: underline;
+  }
 }
 
 .footer__copyright {

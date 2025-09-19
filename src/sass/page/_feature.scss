@@ -8,9 +8,9 @@
   height: rem(1519);
 
   @include mq(md) {
-    padding-top: rem(15);
+    padding-top: rem(53);
     padding-bottom: rem(56);
-    height: clamp(rem(1250), 347.2vw, rem(1736));
+    height: clamp(rem(1500), 347.2vw, rem(1736));
   }
 }
 
@@ -44,7 +44,7 @@
   margin-top: rem(56);
   margin-right: auto;
   margin-left: auto;
-  width: clamp(rem(500), 73.21vw, rem(1200));
+  width: clamp(rem(500), 73.21vw, rem(1000));
   position: relative;
   z-index: 10;
 

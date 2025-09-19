@@ -9,7 +9,7 @@
     display: grid;
     place-items: center;
     margin-top: rem(75);
-    padding-bottom: 37%;
+    padding-bottom: 33%;
   }
 }
 
@@ -21,7 +21,7 @@
   }
 }
 
-.feature-card:nth-child(3) {
+.feature-card:nth-of-type(3) {
   margin-top: rem(60);
 
   @include mq(md) {
@@ -44,8 +44,8 @@
 }
 
 .feature-card--reverse .feature-card__background {
-  top: 8%;
-  left: 2.7%;
+  top: 3%;
+  left: -1.4%;
   right: auto;
 }
 
@@ -121,7 +121,7 @@
   padding: rem(45);
 
   @include mq(md) {
-    max-width: rem(447);
+    max-width: clamp(rem(322), 89.4vw, rem(447));
     padding: clamp(rem(19), 5.4vw, rem(27)) clamp(rem(23), 6.4vw, rem(32));
   }
 }

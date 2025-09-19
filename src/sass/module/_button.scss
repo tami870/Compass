@@ -17,9 +17,11 @@
   width: 100%;
 }
 
-.button:hover {
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
+@media (hover: hover) and (pointer: fine) {
+  .button:hover {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
 }
 
 // 押すと影が消える（凹むように見える）
@@ -40,7 +42,7 @@
   align-items: center;
   justify-content: center;
   min-width: rem(16);
-  z-index: 90;
+  z-index: 40;
 }
 
 ////////////////////////////////////////////
@@ -122,7 +124,7 @@
   width: clamp(rem(20), 5.6vw, rem(28));
   height: clamp(rem(20), 5.6vw, rem(28));
   transform: translateY(-50%);
-  z-index: 2;
+  z-index: 20;
   background: linear-gradient(
       28deg,
       transparent calc(50% - 1px),
@@ -156,10 +158,12 @@
   }
 }
 
-.button.button__cta:hover {
-  opacity: 1;
-  background-color: $color-accent-hover;
-  transition: background-color 0.3s ease;
+@media (hover: hover) and (pointer: fine) {
+  .button.button__cta:hover {
+    opacity: 1;
+    background-color: $color-accent-hover;
+    transition: background-color 0.3s ease;
+  }
 }
 
 ////////////////////////////////////////////
@@ -182,6 +186,13 @@
     line-height: 1.2;
     padding: clamp(rem(17), 4.8vw, rem(24));
     font-size: clamp(rem(13), 4.07vw, rem(20));
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button--submit:hover {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
   }
 }
 

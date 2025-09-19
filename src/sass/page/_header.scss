@@ -7,8 +7,12 @@
   right: 0;
   z-index: 1000;
   width: 100%;
-  height: var(--header-height);
+  height: rem(84);
   background-color: $white;
+
+  @include mq(md) {
+    height: rem(79);
+  }
 }
 
 .header__inner {
@@ -17,17 +21,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: rem(84);
   padding-right: rem(15);
   padding-left: rem(15);
 
   @include mq(md) {
-    height: rem(79);
-    padding: 0;
+    padding-right: rem(21);
+    padding-left: rem(21);
   }
 }
 
+// h1の高さを子要素のaタグに合わせる
 .header__title {
+  display: inline-block;
+  line-height: 0;
 }
 
 .header__logo {
@@ -36,7 +42,8 @@
   height: auto;
 
   @include mq(md) {
-    width: clamp(rem(186), 51.6vw, rem(258));
+    width: clamp(rem(181), 50.4vw, rem(252));
+    // width: rem(252);
   }
 }
 
@@ -58,13 +65,13 @@
   color: $text-black;
   font-size: rem(16);
   transition: opacity 0.3s;
-  padding-top: rem(20);
-  padding-bottom: rem(20);
-  padding-right: rem(20);
-  padding-left: rem(20);
+  padding-top: rem(30);
+  padding-bottom: rem(30);
+  padding-right: rem(19);
+  padding-left: rem(19);
 
   @include mq(md) {
-    padding: 0 rem(10);
+    // padding: 0 rem(10);
   }
 }
 
@@ -72,22 +79,26 @@
   padding-right: 0;
 }
 
-.header__link:hover {
-  opacity: 0.7;
+@media (hover: hover) and (pointer: fine) {
+  .header__link:hover {
+    opacity: 0.7;
+  }
 }
 
 .header__link--logo {
-  padding-top: rem(23);
-  padding-bottom: rem(23);
-  padding-right: rem(10.5);
-  padding-left: rem(10.5);
+  display: inline-block;
+  padding: rem(24.5) 0;
+
+  @include mq(md) {
+    padding: rem(17.5) 0;
+  }
 }
 
 .header__contact {
   display: flex;
   align-items: center;
-  gap: rem(25);
-  margin-left: rem(10);
+  gap: rem(33);
+  margin-left: rem(13);
 }
 
 .header__tel {
@@ -99,7 +110,7 @@
   font-size: rem(30);
   font-weight: bold;
   color: $color-accent;
-  line-height: 1;
+  line-height: 1.08;
   display: flex;
   align-items: center;
 }
@@ -118,5 +129,4 @@
 
 .header__button {
   width: rem(170);
-  margin-top: rem(8);
 }

@@ -33,16 +33,6 @@ jQuery(function ($) {
     $(".js-drawer").removeClass("is-open");
   });
 
-  // $(".js-hamburger").on("click", function () {
-  //   $(this).toggleClass("is-active");
-  //   $(".js-drawer").fadeToggle();
-  // });
-
-  // $('.js-drawer a[href^="#"]').on("click", function () {
-  //   $(".js-hamburger").removeClass("is-active");
-  //   $(".js-drawer").fadeOut();
-  // });
-
   // ===============================
   // 3) 直リンク(#hash)・履歴移動にも確実に効かせる保険
   // ===============================

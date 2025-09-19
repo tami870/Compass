@@ -78,8 +78,10 @@
   text-decoration: none;
 }
 
-.contact-cta__tel-link:hover {
-  text-decoration: underline;
+@media (hover: hover) and (pointer: fine) {
+  .contact-cta__tel-link:hover {
+    text-decoration: underline;
+  }
 }
 
 .contact-cta__tel-icon {

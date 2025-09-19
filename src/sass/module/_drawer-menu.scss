@@ -3,25 +3,34 @@
 /* セクションリンクのクリック時のスクロール位置調整 */
 :root {
   --header-height: rem(84);
+
+  @include mq(md) {
+    --header-height: rem(79);
+  }
 }
+
 [id] {
-  scroll-margin-top: var(--header-height);
-}
-html {
-  scroll-behavior: smooth;
+  scroll-margin-top: rem(84);
+
+  @include mq(md) {
+    scroll-margin-top: rem(79);
+  }
 }
 
 .drawer-menu {
-  position: fixed;
-  z-index: 900;
-  inset: 0;
   display: none;
+  position: fixed;
+  top: rem(84);
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: $white;
   overflow-y: auto;
+  z-index: 900;
 
   @include mq(md) {
     position: static;
-    top: auto;
+    top: rem(79);
     left: auto;
     right: auto;
   }
@@ -45,7 +54,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 100%;
+  // min-height: 100%;
   padding-top: 0;
   padding-right: rem(22);
   padding-bottom: rem(80);

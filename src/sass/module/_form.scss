@@ -218,8 +218,10 @@ select:focus {
   text-decoration: underline;
 }
 
-.form__link--custom:hover {
-  text-decoration: none;
+@media (hover: hover) and (pointer: fine) {
+  .form__link--custom:hover {
+    text-decoration: none;
+  }
 }
 
 /* ================================
@@ -323,4 +325,12 @@ select[data-touched]:invalid {
 
 .form__button .button:enabled {
   opacity: 1;
+  background-color: $color-accent;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .form__button .button:enabled:hover {
+    background-color: $color-accent-hover;
+    transition: background-color 0.3s ease;
+  }
 }

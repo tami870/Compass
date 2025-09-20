@@ -68,6 +68,258 @@ jQuery(function ($) {
   // 5) GSAPアニメーション
   // ===============================
 
+  // 【heroセクション】
+  // 家は下からフェードイン、モデルとボタンはふわっと表示
+  gsap.from(".hero__catch", {
+    y: 30,
+    opacity: 0,
+    duration: 0.8,
+    ease: "power2.out",
+  });
+
+  gsap.from(".hero__image", {
+    opacity: 0,
+    duration: 1,
+    delay: 0.3,
+    ease: "power2.out",
+  });
+
+  gsap.from(".hero__badge", {
+    scale: 0.8,
+    opacity: 0,
+    stagger: 0.2,
+    duration: 0.6,
+    delay: 0.6,
+  });
+
+  gsap.from(".hero__cta", {
+    scale: 0.9,
+    opacity: 0,
+    duration: 0.6,
+    delay: 0.6,
+    ease: "back.out(1.7)",
+  });
+
+  // 【problemセクション】
+  // 基本は下からフェードイン、テキストはふわっと表示
+  gsap.from(".problem__heading", {
+    y: 20,
+    opacity: 0,
+    duration: 0.8,
+    scrollTrigger: {
+      trigger: ".problem",
+      start: "top 80%",
+      once: true,
+    },
+  });
+
+  ScrollTrigger.matchMedia({
+    "(min-width: 768px)": function () {
+      gsap.utils.toArray(".problem__item").forEach((card, i) => {
+        gsap.from(card, {
+          x: i < 2 ? -100 : 100, // デスクトップ版は偶数枚目→左から、奇数枚目→右からフェードイン
+          opacity: 0,
+          duration: 0.8,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 80%",
+            toggleActions: "play none none none",
+            once: true,
+          },
+        });
+      });
+    },
+
+    "(max-width: 767px)": function () {
+      gsap.utils.toArray(".problem__item").forEach((card) => {
+        gsap.from(card, {
+          y: 30,
+          opacity: 0,
+          duration: 0.8,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 90%",
+            once: true,
+          },
+        });
+      });
+    },
+  });
+  gsap.from(".problem__solution-text", {
+    scale: 0.9,
+    opacity: 0,
+    duration: 0.6,
+    delay: 0.5,
+    scrollTrigger: {
+      trigger: ".problem__solution",
+      start: "top 90%",
+      once: true,
+    },
+  });
+
+  // 【contact-info（中段）セクション】
+  // 下からフェードイン
+  gsap.from(".contact-cta__info", {
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".contact-cta__info",
+      start: "top 90%",
+      once: true,
+    },
+  });
+
+  gsap.from([".contact-cta__tel-number", ".contact-cta__tel-icon"], {
+    scale: 0.95,
+    opacity: 0,
+    duration: 0.8,
+    delay: 0.2,
+    ease: "back.out(1.7)",
+    scrollTrigger: {
+      trigger: ".contact-cta__info",
+      start: "top 90%",
+      once: true,
+    },
+  });
+
+  gsap.from(".contact-cta__button", {
+    y: 20,
+    opacity: 0,
+    duration: 0.8,
+    delay: 0.4,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".contact-cta__info",
+      start: "top 90%",
+      once: true,
+    },
+  });
+
+  // 【featureカード】
+  // デスクトップ版のみ左右フェードイン、モバイル版は下からフェードイン
+  ScrollTrigger.matchMedia({
+    "(min-width: 768px)": function () {
+      gsap.utils.toArray(".feature__card").forEach((card, i) => {
+        gsap.from(card, {
+          x: i % 2 === 0 ? -80 : 80, // 偶数は左から、奇数は右からフェードイン
+          opacity: 0,
+          duration: 0.8,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 85%",
+            toggleActions: "play none none none",
+            once: true,
+          },
+        });
+      });
+    },
+
+    "(max-width: 767px)": function () {
+      // ★修正: forEach に変更してSPも1枚ずつ出す
+      gsap.utils.toArray(".feature__card").forEach((card) => {
+        gsap.from(card, {
+          y: 30,
+          opacity: 0,
+          duration: 0.8,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 85%",
+            once: true,
+          },
+        });
+      });
+    },
+  });
+
+  // 【expectationカード、voiceカード】
+  // 下からフェードイン
+  [".expectation", ".voice"].forEach((section) => {
+    ScrollTrigger.batch(
+      section + " .expectation__card, " + section + " .voice__card",
+      {
+        start: "top 90%",
+        onEnter: (batch) => {
+          gsap.from(batch, {
+            y: 40,
+            opacity: 0,
+            duration: 0.6,
+            ease: "power1.out",
+            stagger: 0.2,
+          });
+        },
+        once: true,
+      }
+    );
+  });
+
+  // 【実績を数字で見せるカード】
+  // カウントアップ
+  window.addEventListener("load", () => {
+    const counters = document.querySelectorAll(".management-stats__number");
+
+    counters.forEach((el) => {
+      el.style.display = "inline-block";
+      el.style.textAlign = "right";
+      const raw = el.dataset.target ?? el.textContent.replace(/,/g, "");
+      el.style.minWidth = String(raw).length + "ch";
+      el.style.fontVariantNumeric = "tabular-nums";
+    });
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".management-services__stats",
+        start: "top 80%",
+        once: true,
+      },
+    });
+
+    counters.forEach((el) => {
+      const end = Number(el.dataset.target ?? el.textContent.replace(/,/g, ""));
+      const obj = { val: 0 };
+
+      tl.to(
+        obj,
+        {
+          val: end,
+          duration: 1.4,
+          ease: "power1.out",
+          onUpdate() {
+            el.textContent = Math.round(obj.val).toLocaleString();
+          },
+          onComplete() {
+            gsap.fromTo(
+              el,
+              { "--shine-x": "-200%", opacity: 1 },
+              {
+                "--shine-x": "200%",
+                "--shine-opacity": 1,
+                duration: 3,
+                ease: "power1.inOut",
+                repeat: -1,
+                repeatDelay: 2,
+                onStart: () => {
+                  el.style.setProperty("--shine-opacity", 1);
+                },
+                onComplete: () => {
+                  el.style.setProperty("--shine-opacity", 0);
+                },
+              }
+            );
+          },
+        },
+        0
+      );
+    });
+
+    ScrollTrigger.refresh();
+  });
+
   // ===============================
   // 6) バリデーション
   // ===============================

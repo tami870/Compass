@@ -1,5 +1,8 @@
 @use "global" as *;
 
+/* ================================
+  実績を数字で見せるカード
+================================ */
 .management-stats {
   display: flex;
   flex-direction: column;
@@ -42,10 +45,36 @@
   letter-spacing: 0.06em;
   font-family: $numbers-font-family;
 
+  // アニメーション制御用
+  min-width: 5ch; // 桁数ぶん確保
+  position: relative;
+  overflow: hidden;
+  z-index: 90;
+  line-height: 1;
+
   @include mq(md) {
     font-size: clamp(rem(46), 14.4vw, rem(72));
-    line-height: 1;
   }
+}
+
+// アニメーション制御用（疑似要素で輝きを出す）
+.management-stats__number::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.8) 40%,
+    transparent 90%
+  );
+  transform: translateX(var(--shine-x, -200%)) skewX(-20deg);
+  opacity: var(--shine-opacity, 0);
+  pointer-events: none;
+  z-index: 10;
 }
 
 .management-stats__unit {

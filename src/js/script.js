@@ -69,14 +69,7 @@ jQuery(function ($) {
   // ===============================
 
   // 【heroセクション】
-  // 家は下からフェードイン、モデルとボタンはふわっと表示
-  gsap.from(".hero__catch", {
-    y: 30,
-    opacity: 0,
-    duration: 0.8,
-    ease: "power2.out",
-  });
-
+  // モデルとボタンはふわっと表示（ボタンはモバイル版のみ実装）
   gsap.from(".hero__image", {
     opacity: 0,
     duration: 1,
@@ -92,12 +85,14 @@ jQuery(function ($) {
     delay: 0.6,
   });
 
-  gsap.from(".hero__cta", {
-    scale: 0.9,
-    opacity: 0,
-    duration: 0.6,
-    delay: 0.6,
-    ease: "back.out(1.7)",
+  gsap.matchMedia().add("(max-width: 767px)", () => {
+    gsap.from(".hero__cta", {
+      scale: 0.9,
+      opacity: 0,
+      duration: 0.6,
+      delay: 0.6,
+      ease: "back.out(1.7)",
+    });
   });
 
   // 【problemセクション】
@@ -259,7 +254,7 @@ jQuery(function ($) {
   });
 
   // 【実績を数字で見せるカード】
-  // カウントアップ
+  // 数字がフェードインしたら、一度だけshineエフェクト
   window.addEventListener("load", () => {
     const counters = document.querySelectorAll(".management-stats__number");
 
@@ -275,45 +270,40 @@ jQuery(function ($) {
       scrollTrigger: {
         trigger: ".management-services__stats",
         start: "top 80%",
-        once: true,
+        once: true, // 1回だけ
       },
     });
 
     counters.forEach((el) => {
-      const end = Number(el.dataset.target ?? el.textContent.replace(/,/g, ""));
-      const obj = { val: 0 };
-
-      tl.to(
-        obj,
+      tl.fromTo(
+        el,
+        { y: 40, opacity: 0 },
         {
-          val: end,
-          duration: 1.4,
-          ease: "power1.out",
-          onUpdate() {
-            el.textContent = Math.round(obj.val).toLocaleString();
-          },
-          onComplete() {
-            gsap.fromTo(
-              el,
-              { "--shine-x": "-200%", opacity: 1 },
-              {
-                "--shine-x": "200%",
-                "--shine-opacity": 1,
-                duration: 3,
-                ease: "power1.inOut",
-                repeat: -1,
-                repeatDelay: 2,
-                onStart: () => {
-                  el.style.setProperty("--shine-opacity", 1);
-                },
-                onComplete: () => {
-                  el.style.setProperty("--shine-opacity", 0);
-                },
-              }
-            );
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power2.out",
+          onStart() {
+            const endText = el.dataset.target ?? el.textContent;
+            el.textContent = Number(endText).toLocaleString();
           },
         },
         0
+      );
+
+      // フェードイン直後にshineエフェクト（1回だけ）
+      tl.fromTo(
+        el,
+        { "--shine-x": "-150%", "--shine-opacity": 1 },
+        {
+          "--shine-x": "150%",
+          "--shine-opacity": 0,
+          duration: 3.0,
+          ease: "power2.inOut",
+          onStart: () => el.style.setProperty("--shine-opacity", 1),
+          onComplete: () => el.style.setProperty("--shine-opacity", 0),
+        },
+        ">-0.2"
       );
     });
 

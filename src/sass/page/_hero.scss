@@ -36,13 +36,16 @@
   padding-right: rem(48);
   padding-left: rem(26);
   text-align: center;
-  width: auto;
-  max-width: rem(749);
+  width: clamp(rem(652.8), 58.18vw, rem(768));
   clip-path: polygon(50% 0%, 100% 22%, 100% 100%, 0% 100%, 0% 22%);
   position: absolute;
   top: 6%;
-  left: 9%;
+  left: 8%;
   z-index: 10;
+
+  @include mq(xl) {
+    left: 5.5%;
+  }
 
   @include mq(md) {
     padding-top: clamp(rem(23), 6.4vw, rem(32));
@@ -50,8 +53,9 @@
     padding-bottom: clamp(rem(14), 4vw, rem(20));
     padding-left: clamp(rem(7), 2vw, rem(10));
     max-width: rem(460);
-    top: clamp(8%, 5%, 4%);
-    left: clamp(6%, 4.1%, 4.1%);
+    width: 92.5%;
+    top: 5%;
+    left: 4.1%;
   }
 }
 
@@ -76,7 +80,7 @@
 .hero__catch-sub::after {
   content: "";
   position: absolute;
-  top: 114%;
+  top: 119%;
   left: 56%;
   width: rem(36);
   height: rem(1);
@@ -85,7 +89,7 @@
 
   @include mq(md) {
     width: rem(32);
-    top: 122.5%;
+    top: 121%;
     left: 53%;
   }
 }
@@ -130,7 +134,7 @@
 
 .hero__catch-line {
   display: block;
-  font-size: rem(70);
+  font-size: clamp(rem(59.5), 5.3vw, rem(70));
   font-weight: $bold;
   line-height: 1.142;
   color: $text-blue;
@@ -148,7 +152,7 @@
 }
 
 .hero__catch-emphasis {
-  font-size: rem(100);
+  font-size: clamp(rem(85), 7.58vw, rem(100));
   font-weight: $bold;
   line-height: 1.142;
   letter-spacing: 0.05em;
@@ -171,6 +175,12 @@
   z-index: 20;
   top: 14%;
   right: 1%;
+
+  @include mq(xl) {
+    max-width: rem(575);
+    top: 21.4%;
+    right: 0;
+  }
 
   @include mq(lg) {
     max-width: rem(500);
@@ -199,6 +209,11 @@
   z-index: 30;
   bottom: 7%;
   right: 11%;
+
+  @include mq(xl) {
+    bottom: 3.2%;
+    right: 7.1%;
+  }
 
   @include mq(lg) {
     bottom: 2%;

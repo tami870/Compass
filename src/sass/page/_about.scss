@@ -51,8 +51,8 @@
     margin-top: rem(20);
     padding-top: rem(28);
     padding-bottom: rem(21);
-    padding-right: rem(0);
-    padding-left: rem(4.8);
+    padding-right: rem(4);
+    padding-left: rem(4);
     max-width: rem(600);
     width: 100%;
   }
@@ -60,7 +60,7 @@
 
 .about__text {
   font-size: rem(28);
-  letter-spacing: 0.15em;
+  letter-spacing: 0.13em;
   text-align: center;
   color: $text-black;
   font-weight: $regular;
@@ -95,6 +95,5 @@
   @include mq(md) {
     margin-top: clamp(rem(19), 5.4vw, rem(27));
     font-size: clamp(rem(15), 4.2vw, rem(21));
-    letter-spacing: 0.2em;
   }
 }
